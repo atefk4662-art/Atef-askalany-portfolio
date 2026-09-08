@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin - Manage Projects</title>
+  <style>
+    :root {
+      --bg: #0A0F1A;
+      --surface: #1E293B;
+      --text: #F8FAFC;
+      --text-muted: #94A3B8;
+      --accent: #0EA5E9;
+      --border: #334155;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      margin: 0;
+      padding: 2rem;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    h1, h2 { color: var(--accent); }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+    }
+    .form-group {
+      margin-bottom: 1rem;
+    }
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+      color: var(--text-muted);
+    }
+    input[type="text"], input[type="number"], textarea, select {
+      width: 100%;
+      padding: 0.75rem;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      color: var(--text);
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    textarea { height: 100px; resize: vertical; }
+    .checkbox-group {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .checkbox-group label { margin: 0; display: inline; }
+    button {
+      background: var(--accent);
+      color: white;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    button:hover { opacity: 0.9; }
+    button.danger { background: #EF4444; }
+    button.secondary { background: var(--border); }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+    }
+    th, td {
+      padding: 1rem;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+    }
+    th { color: var(--text-muted); font-weight: 500; }
+    .actions { display: flex; gap: 0.5rem; }
+    .status-msg {
+      padding: 1rem;
+      border-radius: 4px;
+      margin-bottom: 1rem;
+      display: none;
+      background: rgba(16, 185, 129, 0.2);
+      color: #10B981;
+      border: 1px solid #10B981;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Portfolio Project Manager</h1>
+    <p style="color: var(--text-muted);">Changes made here are saved to your browser (localStorage). To make them permanent across all devices, the generated JSON below needs to be copied into <code>js/projects-data.js</code>.</p>
+    
+    <div id="status" class="status-msg"></div>
+
+    <div class="card">
+      <h2 id="form-title">Add New Project</h2>
+      <form id="project-form">
+        <input type="hidden" id="project-id" />
+        
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+          <div class="form-group">
+            <label>ID (unique string, e.g. "shopeasy")</label>
+            <input type="text" id="id" required />
+          </div>
+          <div class="form-group">
+            <label>Order (number, for sorting)</label>
+            <input type="number" id="order" required />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Title</label>
+          <input type="text" id="title" required />
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+          <div class="form-group">
+            <label>Category Value (data, systems, hybrid)</label>
+            <select id="category" required>
+              <option value="data">data</option>
+              <option value="systems">systems</option>
+              <option value="hybrid">hybrid</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Category Label (e.g. "Data & Analytics")</label>
+            <input type="text" id="categoryLabel" required />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Description</label>
+          <textarea id="description" required></textarea>
+        </div>
+
+        <div class="form-group">
+          <label>Cover Image Path (e.g. "assets/img.jpg")</label>
+          <input type="text" id="coverImage" required />
+        </div>
+
+        <div class="form-group">
+          <label>Tools (comma separated)</label>
+          <input type="text" id="tools" placeholder="SQL, Python, Power BI" />
+        </div>
+
+        <div class="form-group">
+          <label>Metrics (format: Value|Label, comma separated)</label>
+          <input type="text" id="metrics" placeholder="8.5%|Avg CR, 2.98M|Views" />
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+          <div class="form-group">
+            <label>Status</label>
+            <select id="status-sel">
+              <option value="completed">completed</option>
+              <option value="coming-soon">coming-soon</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Case Study URL (e.g. "projects/shopeasy.html")</label>
+            <input type="text" id="caseStudyUrl" />
+          </div>
+        </div>
+
+        <div class="form-group checkbox-group">
+          <input type="checkbox" id="featured" />
+          <label for="featured">Show in Homepage Featured Projects</label>
+        </div>
+
+        <div style="margin-top: 1.5rem; display: flex; gap: 1rem;">
+          <button type="submit" id="save-btn">Save Project</button>
+          <button type="button" class="secondary" id="cancel-btn" style="display:none;">Cancel Edit</button>
+          <button type="button" class="secondary" id="reset-defaults-btn">Reset to Defaults</button>
+        </div>
+      </form>
+    </div>
+
+    <div class="card">
+      <h2>Existing Projects</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Order</th>
+            <th>Title</th>
+            <th>Category</th>
+            <th>Featured</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="projects-table">
+          <!-- Populated by JS -->
+        </tbody>
+      </table>
+    </div>
+
+    <div class="card">
+      <h2>Export JSON</h2>
+      <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1rem;">Copy this and replace the <code>PROJECTS</code> array in <code>js/projects-data.js</code> to make changes permanent.</p>
+      <textarea id="json-export" readonly style="height: 200px; font-family: monospace; font-size: 0.85rem;"></textarea>
+    </div>
+  </div>
+
+  <!-- Load default projects -->
+  <script src="js/projects-data.js"></script>
+  <script>
+    let currentProjects = getProjects();
+    const form = document.getElementById('project-form');
+    const tableBody = document.getElementById('projects-table');
+    const statusMsg = document.getElementById('status');
+    
+    function showMsg(text) {
+      statusMsg.textContent = text;
+      statusMsg.style.display = 'block';
+      setTimeout(() => statusMsg.style.display = 'none', 3000);
+    }
+
+    function renderTable() {
+      currentProjects.sort((a, b) => a.order - b.order);
+      tableBody.innerHTML = currentProjects.map(p => `
+        <tr>
+          <td>${p.order}</td>
+          <td><strong>${p.title}</strong><br><small style="color:var(--text-muted)">${p.id}</small></td>
+          <td><span style="background:var(--bg);padding:2px 6px;border-radius:4px;border:1px solid var(--border);font-size:0.8rem">${p.category}</span></td>
+          <td>${p.featured ? '⭐' : ''}</td>
+          <td class="actions">
+            <button class="secondary" style="padding: 0.4rem 0.8rem" onclick="editProject('${p.id}')">Edit</button>
+            <button class="danger" style="padding: 0.4rem 0.8rem" onclick="deleteProject('${p.id}')">Del</button>
+          </td>
+        </tr>
+      `).join('');
+      
+      document.getElementById('json-export').value = JSON.stringify(currentProjects, null, 2);
+    }
+
+    function editProject(id) {
+      const p = currentProjects.find(x => x.id === id);
+      if (!p) return;
+      
+      document.getElementById('form-title').textContent = 'Edit Project: ' + p.title;
+      document.getElementById('project-id').value = p.id;
+      document.getElementById('id').value = p.id;
+      document.getElementById('id').readOnly = true;
+      document.getElementById('order').value = p.order;
+      document.getElementById('title').value = p.title;
+      document.getElementById('category').value = p.category;
+      document.getElementById('categoryLabel').value = p.categoryLabel;
+      document.getElementById('description').value = p.description;
+      document.getElementById('coverImage').value = p.coverImage;
+      document.getElementById('status-sel').value = p.status;
+      document.getElementById('caseStudyUrl').value = p.caseStudyUrl || '';
+      document.getElementById('featured').checked = p.featured;
+      
+      document.getElementById('tools').value = p.tools.join(', ');
+      document.getElementById('metrics').value = p.metrics.map(m => `${m.value}|${m.label}`).join(', ');
+      
+      document.getElementById('cancel-btn').style.display = 'block';
+      window.scrollTo(0, 0);
+    }
+
+    function deleteProject(id) {
+      if(confirm('Delete project ' + id + '?')) {
+        currentProjects = currentProjects.filter(p => p.id !== id);
+        saveProjects(currentProjects);
+        renderTable();
+        showMsg('Project deleted');
+      }
+    }
+
+    document.getElementById('cancel-btn').addEventListener('click', () => {
+      form.reset();
+      document.getElementById('project-id').value = '';
+      document.getElementById('id').readOnly = false;
+      document.getElementById('form-title').textContent = 'Add New Project';
+      document.getElementById('cancel-btn').style.display = 'none';
+    });
+
+    document.getElementById('reset-defaults-btn').addEventListener('click', () => {
+      if(confirm('Are you sure? This will wipe localStorage and reload defaults from code.')) {
+        localStorage.removeItem('portfolio_projects');
+        currentProjects = PROJECTS; // from projects-data.js
+        renderTable();
+        showMsg('Reset to defaults');
+      }
+    });
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      
+      const toolsStr = document.getElementById('tools').value;
+      const tools = toolsStr ? toolsStr.split(',').map(s => s.trim()).filter(s=>s) : [];
+      
+      const metricsStr = document.getElementById('metrics').value;
+      const metrics = [];
+      if(metricsStr) {
+        metricsStr.split(',').forEach(m => {
+          const parts = m.split('|');
+          if(parts.length === 2) metrics.push({ value: parts[0].trim(), label: parts[1].trim() });
+        });
+      }
+
+      const pData = {
+        id: document.getElementById('id').value,
+        title: document.getElementById('title').value,
+        category: document.getElementById('category').value,
+        categoryLabel: document.getElementById('categoryLabel').value,
+        description: document.getElementById('description').value,
+        coverImage: document.getElementById('coverImage').value,
+        tools: tools,
+        metrics: metrics,
+        featured: document.getElementById('featured').checked,
+        status: document.getElementById('status-sel').value,
+        caseStudyUrl: document.getElementById('caseStudyUrl').value || null,
+        order: parseInt(document.getElementById('order').value) || 99
+      };
+
+      const existingId = document.getElementById('project-id').value;
+      if (existingId) {
+        const idx = currentProjects.findIndex(p => p.id === existingId);
+        if(idx !== -1) currentProjects[idx] = pData;
+        showMsg('Project updated!');
+      } else {
+        if(currentProjects.find(p => p.id === pData.id)) {
+          alert('A project with this ID already exists!');
+          return;
+        }
+        currentProjects.push(pData);
+        showMsg('Project added!');
+      }
+
+      saveProjects(currentProjects);
+      renderTable();
+      document.getElementById('cancel-btn').click(); // reset form
+    });
+
+    // Init
+    renderTable();
+  </script>
+</body>
+</html>

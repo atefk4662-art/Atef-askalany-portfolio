@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects & Case Studies | Atef Elasklany</title>
+  <meta name="description" content="A complete collection of data analytics, business intelligence, and system architecture projects by Atef Elasklany." />
+  
+  <!-- Google Fonts: Plus Jakarta Sans, Inter, JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  
+  <!-- Core Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="dark-theme">
+
+  <!-- ================= TOP NAVIGATION BAR ================= -->
+  <header class="site-header">
+    <div class="nav-container">
+      <a href="index.html" class="brand-logo">
+        <span class="logo-name">Atef Elasklany</span>
+        <span class="status-indicator">
+          <span class="status-dot"></span> Available for Projects
+        </span>
+      </a>
+
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="projects.html" style="color: var(--accent-cyan-light);">Projects</a>
+        <a href="index.html#capabilities">What I Do</a>
+        <a href="index.html#methodology">Approach</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#skills">Skills</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="index.html#contact" class="btn btn-sm btn-primary">Get In Touch</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ================= PROJECTS PAGE HEADER ================= -->
+    <section class="projects-page-header section-spacing">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-tag">Selected Work</span>
+          <h1 class="section-heading" style="font-size: 3.5rem; margin-bottom: 1.5rem;">Projects & Case Studies</h1>
+          <p class="section-sub" style="max-width: 800px; font-size: 1.2rem;">
+            A collection of data, analytics, business intelligence, and systems projects built to solve practical business problems.
+          </p>
+        </div>
+
+        <!-- Project Filter System -->
+        <div class="project-filters">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="data">Data & Analytics</button>
+          <button class="filter-btn" data-filter="systems">Systems & Software</button>
+          <button class="filter-btn" data-filter="hybrid">AI & Hybrid</button>
+        </div>
+
+        <!-- Full Projects Grid rendered dynamically by app.js -->
+        <div class="project-grid" id="all-projects-grid">
+          <!-- Cards injected here from projects-data.js -->
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= SITE FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-left">
+        <div class="footer-brand">Atef Elasklany</div>
+        <p class="footer-sub">Data Analyst & Business Systems Developer • BIS Graduate</p>
+      </div>
+      <div class="footer-links">
+        <a href="projects.html" class="footer-link">Projects</a>
+        <a href="index.html#capabilities" class="footer-link">Capabilities</a>
+        <a href="index.html#about" class="footer-link">About</a>
+        <a href="index.html#contact" class="footer-link">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/projects-data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

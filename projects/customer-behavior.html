@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Customer Shopping Behavior Analysis | Atef Elasklany</title>
+  <meta name="description" content="Customer Shopping Behavior Analysis Case Study by Atef Elasklany. Analyzed 3,900 transactions to uncover behavioral patterns, customer segmentation, and data-driven retention strategies." />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body class="dark-theme">
+
+  <!-- ================= TOP NAVIGATION BAR ================= -->
+  <header class="site-header">
+    <div class="nav-container">
+      <a href="../index.html" class="brand-logo">
+        <span class="logo-name">Atef Elasklany</span>
+        <span class="status-indicator">
+          <span class="status-dot"></span> Available for Projects
+        </span>
+      </a>
+
+      <nav class="nav-links">
+        <a href="../index.html">Home</a>
+        <a href="../projects.html" style="color: var(--accent-cyan-light);">Projects</a>
+        <a href="#problem">The Problem</a>
+        <a href="#process">The Process</a>
+        <a href="#insights">Key Insights</a>
+        <a href="#recommendations">Recommendations</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="../index.html#contact" class="btn btn-sm btn-primary">Get In Touch</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="case-study-container">
+
+    <!-- ================= 01. CASE STUDY HERO ================= -->
+    <section class="cs-hero section-spacing" id="overview">
+      <div class="container">
+        
+        <div class="hero-top-meta">
+          <a href="../projects.html" class="back-link">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+            Back to Projects
+          </a>
+          <span class="badge badge-primary">Data & Analytics</span>
+        </div>
+
+        <h1 class="cs-title">Customer Shopping Behavior Analysis</h1>
+        <p class="cs-subtitle">Turning thousands of purchase records into clear strategies for customer retention and revenue growth.</p>
+
+        <div class="hero-summary-grid">
+          
+          <div class="summary-card main-summary">
+            <div class="summary-label">Executive Summary</div>
+            <p class="summary-text">
+              A retail business had thousands of customer transactions but no clear understanding of <strong>what drives repeat purchases</strong> or <strong>which customer groups bring the most value</strong>. I cleaned, analyzed, and visualized the data using Python, SQL, and Power BI to uncover behavioral patterns. The analysis revealed key insights about the impact of discounts, subscription programs, and age demographics on revenue — leading to 5 actionable business strategies.
+            </p>
+          </div>
+
+          <div class="summary-card meta-sidebar">
+            <div class="meta-row">
+               <span class="meta-label">Domain</span>
+               <span class="meta-val">Retail / E-Commerce</span>
+            </div>
+            <div class="meta-row">
+               <span class="meta-label">Role</span>
+               <span class="meta-val">Data Analyst</span>
+            </div>
+            <div class="meta-row">
+               <span class="meta-label">Stack</span>
+               <span class="meta-val">Python / SQL / Power BI</span>
+            </div>
+            <div class="meta-row">
+               <span class="meta-label">Dataset</span>
+               <span class="meta-val highlight-kpi">3,900 Transactions</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= 02. THE PROBLEM ================= -->
+    <section class="cs-challenge section-spacing" id="problem">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-tag">01 / The Business Problem</span>
+          <h2 class="section-heading">Data Rich, Insight Poor</h2>
+        </div>
+
+        <div class="grid-3-col">
+          
+          <div class="glass-card">
+            <div class="card-icon alert-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M16 16s-1.5-2-4-2-4 2-4 2"></path><line x1="9" y1="9" x2="9.01" y2="9"></line><line x1="15" y1="9" x2="15.01" y2="9"></line></svg>
+            </div>
+            <h3 class="card-h">Who Are Our Best Customers?</h3>
+            <p class="card-p">
+              The business couldn't identify which age groups, genders, or customer segments were generating the most revenue. Marketing was generic, not targeted.
+            </p>
+          </div>
+
+          <div class="glass-card">
+            <div class="card-icon warning-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+            </div>
+            <h3 class="card-h">Are Discounts Actually Working?</h3>
+            <p class="card-p">
+              Discounts were being offered without data to prove whether they actually increased customer spending or just cut into profit margins.
+            </p>
+          </div>
+
+          <div class="glass-card">
+            <div class="card-icon warning-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+            </div>
+            <h3 class="card-h">Why Don't Customers Come Back?</h3>
+            <p class="card-p">
+              There was no segmentation to separate new, returning, and loyal customers. Retention programs were based on guesswork, not data.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= 03. THE PROCESS ================= -->
+    <section class="cs-approach section-spacing" id="process">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-tag">02 / My Analysis Process</span>
+          <h2 class="section-heading">From Raw Data to Clear Answers</h2>
+          <p class="section-sub">A structured 3-step approach to transform messy transaction data into actionable business intelligence.</p>
+        </div>
+
+        <div class="journey-flow">
+          
+          <div class="journey-step">
+            <div class="step-badge">Step 01</div>
+            <div class="step-card">
+              <div class="step-icon">🧹</div>
+              <h3 class="step-title">Data Cleaning (Python)</h3>
+              <p class="step-desc">
+                Used <strong>Pandas</strong> to clean 3,900 records: handled missing values, standardized data types, created age groups, and prepared the dataset for analysis. Exported a clean CSV ready for SQL and Power BI.
+              </p>
+              <div class="step-metric">Python + Pandas</div>
+            </div>
+          </div>
+
+          <div class="journey-arrow">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </div>
+
+          <div class="journey-step">
+            <div class="step-badge">Step 02</div>
+            <div class="step-card">
+              <div class="step-icon">🔍</div>
+              <h3 class="step-title">Deep SQL Analysis</h3>
+              <p class="step-desc">
+                Wrote 10 advanced SQL queries using <strong>CTEs, CASE statements, window functions (ROW_NUMBER), subqueries, and aggregations</strong> to answer critical business questions about revenue, segmentation, and product performance.
+              </p>
+              <div class="step-metric">PostgreSQL / SQL Server</div>
+            </div>
+          </div>
+
+          <div class="journey-arrow">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </div>
+
+          <div class="journey-step">
+            <div class="step-badge">Step 03</div>
+            <div class="step-card">
+              <div class="step-icon">📊</div>
+              <h3 class="step-title">Power BI Dashboard</h3>
+              <p class="step-desc">
+                Built an interactive dashboard to visualize the findings: customer segmentation breakdown, revenue by age group, discount impact analysis, and product category performance with dynamic filters.
+              </p>
+              <div class="step-metric">Power BI</div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= 04. KEY INSIGHTS ================= -->
+    <section class="cs-ecosystem section-spacing" id="insights">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-tag">03 / What The Data Revealed</span>
+          <h2 class="section-heading">Key Business Insights</h2>
+          <p class="section-sub">10 SQL queries answered the most important questions about customer behavior and revenue drivers.</p>
+        </div>
+
+        <div class="rec-grid">
+          
+          <div class="rec-card">
+            <div class="rec-header">
+              <span class="rec-number">01</span>
+              <h3 class="rec-title">Revenue by Gender</h3>
+            </div>
+            <p class="rec-p">
+              Identified the total revenue split between male and female customers, revealing whether marketing should be gender-targeted or universal.
+            </p>
+          </div>
+
+          <div class="rec-card">
+            <div class="rec-header">
+              <span class="rec-number">02</span>
+              <h3 class="rec-title">Smart Discount Shoppers</h3>
+            </div>
+            <p class="rec-p">
+              Found customers who used discounts but still spent <strong>above the average</strong> purchase amount — these are high-value customers worth retaining with loyalty perks.
+            </p>
+          </div>
+
+          <div class="rec-card">
+            <div class="rec-header">
+              <span class="rec-number">03</span>
+              <h3 class="rec-title">Top-Rated Products</h3>
+            </div>
+            <p class="rec-p">
+              Ranked the top 5 products by average review rating, helping the business know which items to feature prominently in marketing campaigns.
+            </p>
+          </div>
+
+          <div class="rec-card">
+            <div class="rec-header">
+              <span class="rec-number">04</span>
+              <h3 class="rec-title">Shipping & Spending Correlation</h3>
+            </div>
+            <p class="rec-p">
+              Compared average spend between Standard vs. Express shipping users. Customers choosing Express shipping tend to spend more per order.
+            </p>
+          </div>
+
+          <div class="rec-card">
+            <div class="rec-header">
+              <span class="rec-number">05</span>
+              <h3 class="rec-title">Subscription Impact</h3>
+            </div>
+            <p class="rec-p">
+              Compared subscribers vs. non-subscribers on average spend and total revenue. This data directly answers: <strong>"Is our subscription program worth it?"</strong>
+            </p>
+          </div>
+
+          <div class="rec-card">
+            <div class="rec-header">
+              <span class="rec-number">06</span>
+              <h3 class="rec-title">Customer Segmentation</h3>
+            </div>
+            <p class="rec-p">
+              Used a CTE to classify all customers into <strong>New, Returning, and Loyal</strong> segments based on their purchase history, giving the business a clear view of their customer base composition.
+            </p>
+          </div>
+
+          <div class="rec-card">
+            <div class="rec-header">
+              <span class="rec-number">07</span>
+              <h3 class="rec-title">Revenue by Age Group</h3>
+            </div>
+            <p class="rec-p">
+              Broke down total revenue contribution by age group to identify the most profitable demographic — critical for ad targeting and product positioning.
+            </p>
+          </div>
+
+          <div class="rec-card" style="border-color: var(--accent-emerald);">
+            <div class="rec-header">
+              <span class="rec-number" style="background: var(--accent-emerald-glow); color: var(--accent-emerald);">📈</span>
+              <h3 class="rec-title">Top Products per Category</h3>
+            </div>
+            <p class="rec-p">
+              Used <strong>ROW_NUMBER()</strong> window function to rank the top 3 best-selling products within each category — providing category managers with clear bestseller data.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= 05. BUSINESS RECOMMENDATIONS ================= -->
+    <section class="cs-approach section-spacing" id="recommendations">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-tag">04 / Actionable Strategies</span>
+          <h2 class="section-heading">5 Business Recommendations</h2>
+          <p class="section-sub">Data-backed strategies the business can implement immediately to improve retention and revenue.</p>
+        </div>
+
+        <div class="journey-flow" style="flex-direction: column; gap: 1.5rem;">
+          
+          <div class="journey-step" style="width: 100%;">
+            <div class="step-card" style="max-width: 100%;">
+              <div class="step-icon">🎯</div>
+              <h3 class="step-title">1. Launch a Loyalty Program for "Smart Discount" Shoppers</h3>
+              <p class="step-desc">
+                Customers who use discounts but still spend above average are the most valuable segment. Offer them exclusive membership perks instead of generic percentage-off coupons.
+              </p>
+            </div>
+          </div>
+
+          <div class="journey-step" style="width: 100%;">
+            <div class="step-card" style="max-width: 100%;">
+              <div class="step-icon">👥</div>
+              <h3 class="step-title">2. Target the Highest-Revenue Age Group</h3>
+              <p class="step-desc">
+                Focus marketing spend on the age demographic that generates the most revenue. Tailor product recommendations and ad creatives to resonate with this group.
+              </p>
+            </div>
+          </div>
+
+          <div class="journey-step" style="width: 100%;">
+            <div class="step-card" style="max-width: 100%;">
+              <div class="step-icon">🔄</div>
+              <h3 class="step-title">3. Convert "Returning" Customers to "Loyal"</h3>
+              <p class="step-desc">
+                The segmentation reveals a large pool of Returning customers (1-10 purchases). Create re-engagement email campaigns with personalized product picks to push them into the Loyal tier.
+              </p>
+            </div>
+          </div>
+
+          <div class="journey-step" style="width: 100%;">
+            <div class="step-card" style="max-width: 100%;">
+              <div class="step-icon">📦</div>
+              <h3 class="step-title">4. Promote Express Shipping as a Premium Upsell</h3>
+              <p class="step-desc">
+                Since Express shipping users spend more, bundle it as a "free upgrade" for orders above a certain threshold to encourage larger cart sizes.
+              </p>
+            </div>
+          </div>
+
+          <div class="journey-step" style="width: 100%;">
+            <div class="step-card" style="max-width: 100%;">
+              <div class="step-icon">⭐</div>
+              <h3 class="step-title">5. Feature Top-Rated Products in Marketing</h3>
+              <p class="step-desc">
+                Use the top 5 highest-rated products as the face of campaigns. Social proof (high ratings) combined with visibility drives stronger conversion rates.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= 06. FINAL TAKEAWAY ================= -->
+    <section class="cs-takeaway section-spacing" id="takeaway">
+      <div class="container">
+        
+        <div class="takeaway-box">
+          <div class="takeaway-tag">05 / Professional Takeaway</div>
+          <h2 class="takeaway-heading">Data Without Action is Just Numbers</h2>
+          <p class="takeaway-p">
+            This project demonstrates the full cycle of a Data Analyst's value: taking raw, unstructured transaction data and transforming it into <strong>business strategies that a non-technical stakeholder can act on immediately</strong>. The combination of Python for data preparation, SQL for deep querying, and Power BI for visual storytelling ensures that the insights reach the right people in the right format.
+          </p>
+          
+          <div class="takeaway-footer">
+            <div class="author-block">
+              <div class="author-avatar">AE</div>
+              <div>
+                <div class="author-name">Atef Elasklany</div>
+                <div class="author-title">Data Analyst | Business Systems Developer</div>
+              </div>
+            </div>
+            <div class="takeaway-actions">
+              <a href="../projects.html" class="btn btn-secondary">← Back to Projects</a>
+              <a href="../index.html#contact" class="btn btn-primary">Discuss This Project →</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= SITE FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-left">
+        <div class="footer-brand">Atef Elasklany</div>
+        <p class="footer-sub">Data Analyst & Business Systems Developer • BIS Graduate</p>
+      </div>
+      <div class="footer-links">
+        <a href="../projects.html" class="footer-link">Projects</a>
+        <a href="../index.html#capabilities" class="footer-link">Capabilities</a>
+        <a href="../index.html#about" class="footer-link">About</a>
+        <a href="../index.html#contact" class="footer-link">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/app.js"></script>
+</body>
+</html>

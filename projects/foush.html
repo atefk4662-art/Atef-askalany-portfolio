@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FOUSH Restaurant POS | Atef Elasklany</title>
+  <meta name="description" content="FOUSH Integrated System - A robust, hybrid, offline-first restaurant management & Point of Sale ecosystem designed by Atef Elasklany." />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body class="dark-theme">
+
+  <!-- ================= TOP NAVIGATION BAR ================= -->
+  <header class="site-header">
+    <div class="nav-container">
+      <a href="../index.html" class="brand-logo">
+        <span class="logo-name">Atef Elasklany</span>
+        <span class="status-indicator">
+          <span class="status-dot"></span> Available for Projects
+        </span>
+      </a>
+
+      <nav class="nav-links">
+        <a href="../index.html">Home</a>
+        <a href="../projects.html" style="color: var(--accent-cyan-light);">Projects</a>
+        <a href="#challenge">The Challenge</a>
+        <a href="#architecture">Architecture</a>
+        <a href="#portals">The 5 Portals</a>
+        <a href="#gallery">Project Gallery</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="../index.html#contact" class="btn btn-sm btn-primary">Get In Touch</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="case-study-container">
+
+    <!-- ================= 01. CASE STUDY HERO ================= -->
+    <section class="cs-hero section-spacing" id="overview">
+      <div class="container">
+        
+        <div class="hero-top-meta">
+          <a href="../projects.html" class="back-link">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+            Back to Projects
+          </a>
+          <span class="badge badge-primary">Systems & Software Architecture</span>
+        </div>
+
+        <h1 class="cs-title">FOUSH Restaurant POS</h1>
+        <p class="cs-subtitle">A robust, hybrid, offline-first restaurant management & Point of Sale ecosystem.</p>
+
+        <div class="hero-summary-grid">
+          
+          <div class="summary-card main-summary">
+            <div class="summary-label">Executive Summary</div>
+            <p class="summary-text">
+              Most restaurant software fails the moment the internet drops. To solve this critical operational risk, I engineered <strong>FOUSH</strong>—a bespoke, highly resilient POS system running on a <strong>Dual-Engine Architecture</strong>. It combines a local Node.js LAN server for uninterrupted on-premises operations (orders, kitchen routing, raw thermal printing) with Firebase Cloud synchronization for remote owner visibility. The result is a system that never stops working, ensuring zero downtime during peak hours.
+            </p>
+          </div>
+
+          <div class="summary-card meta-sidebar">
+            <div class="meta-row">
+               <span class="meta-label">Domain</span>
+               <span class="meta-val">Restaurant Tech / Operations</span>
+            </div>
+            <div class="meta-row">
+               <span class="meta-label">Role</span>
+               <span class="meta-val">System Architect & Full-Stack Developer</span>
+            </div>
+            <div class="meta-row">
+               <span class="meta-label">Architecture</span>
+               <span class="meta-val">Node.js / Firebase / PWA / WebSockets</span>
+            </div>
+            <div class="meta-row">
+               <span class="meta-label">Core Feature</span>
+               <span class="meta-val highlight-kpi">100% Offline-First Operations</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Hero Visual Showcase (Real Logo) -->
+        <div class="hero-visual-frame" style="padding: 2rem; background: var(--bg-surface-elevated); display: flex; justify-content: center;">
+          <img src="../assets/foush_real_cover.png" alt="FOUSH Restaurant Logo" style="max-height: 400px; border-radius: var(--radius-lg); box-shadow: var(--shadow-glow);">
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= 02. THE CHALLENGE ================= -->
+    <section class="cs-challenge section-spacing" id="challenge">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-tag">02 / The Problem</span>
+          <h2 class="section-heading">The Fragility of Cloud-Only POS Systems</h2>
+        </div>
+
+        <div class="grid-3-col">
+          
+          <div class="glass-card">
+            <div class="card-icon alert-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+            </div>
+            <h3 class="card-h">Internet Dependency</h3>
+            <p class="card-p">
+              Traditional cloud POS systems freeze completely during internet outages. In a high-volume restaurant, a 10-minute outage means lost orders, angry customers, and chaotic kitchen routing.
+            </p>
+          </div>
+
+          <div class="glass-card">
+            <div class="card-icon warning-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+            </div>
+            <h3 class="card-h">Clunky Browser Printing</h3>
+            <p class="card-p">
+              Web-based POS systems typically rely on standard browser print dialogs, which are incredibly slow, require manual confirmation, and interrupt the cashier's workflow.
+            </p>
+          </div>
+
+          <div class="glass-card">
+            <div class="card-icon warning-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+            </div>
+            <h3 class="card-h">Cluttered Interfaces</h3>
+            <p class="card-p">
+              Off-the-shelf software often jams cashier, waiter, and manager functions into one screen, leading to complex access permissions and slowed down staff onboarding.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= 03. HYBRID ARCHITECTURE ================= -->
+    <section class="cs-approach section-spacing" id="architecture">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-tag">03 / The Engineering Solution</span>
+          <h2 class="section-heading">Dual-Engine Hybrid Architecture</h2>
+          <p class="section-sub">A localized network ensuring absolute stability, backed by cloud synchronization for off-site management.</p>
+        </div>
+
+        <div class="journey-flow">
+          
+          <div class="journey-step">
+            <div class="step-badge">Core 01</div>
+            <div class="step-card">
+              <div class="step-icon">💻</div>
+              <h3 class="step-title">Local Node.js LAN Server</h3>
+              <p class="step-desc">
+                Runs locally inside the venue over Wi-Fi. It handles real-time kitchen routing, table orders, and receipt printing with zero dependencies on external internet connections.
+              </p>
+              <div class="step-metric">100% Offline Capable</div>
+            </div>
+          </div>
+
+          <div class="journey-arrow">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.59-8.31l-4.5 4.5"></path></svg>
+          </div>
+
+          <div class="journey-step">
+            <div class="step-badge">Core 02</div>
+            <div class="step-card">
+              <div class="step-icon">☁️</div>
+              <h3 class="step-title">Firebase Cloud Sync</h3>
+              <p class="step-desc">
+                Syncs transaction logs, sales trends, and stock levels in real time to the cloud the moment internet is restored or available, preventing any data loss.
+              </p>
+              <div class="step-metric">Live Financial Auditing</div>
+            </div>
+          </div>
+
+          <div class="journey-arrow">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </div>
+
+          <div class="journey-step">
+            <div class="step-badge">Hardware</div>
+            <div class="step-card">
+              <div class="step-icon">🖨️</div>
+              <h3 class="step-title">Raw ESC/POS Printing</h3>
+              <p class="step-desc">
+                Dispatches raw printing commands directly to local thermal printers over TCP sockets. Bypasses the slow browser print dialog for instant ticket generation.
+              </p>
+              <div class="step-metric">Zero-Latency Printing</div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= 04. THE 5 PORTALS ================= -->
+    <section class="cs-ecosystem section-spacing" id="portals">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-tag">04 / Role-Based UX</span>
+          <h2 class="section-heading">5 Role-Isolated PWAs</h2>
+          <p class="section-sub">Instead of one crowded app, the system deploys 5 separate Progressive Web Apps tailored for each specific job.</p>
+        </div>
+
+        <div class="rec-grid">
+          
+          <div class="rec-card">
+            <div class="rec-header">
+              <span class="rec-number">01</span>
+              <h3 class="rec-title">Floor Waiter Portal</h3>
+            </div>
+            <p class="rec-p">
+              A tablet/mobile optimized interface for waiters to take orders directly at the table, sending items instantly to the kitchen and updating the cashier's tab.
+            </p>
+          </div>
+
+          <div class="rec-card">
+            <div class="rec-header">
+              <span class="rec-number">02</span>
+              <h3 class="rec-title">Kitchen Display System (KDS)</h3>
+            </div>
+            <p class="rec-p">
+              A real-time screen inside the kitchen receiving orders instantly. Features audio alerts and allows chefs to mark items as prepared, signaling the waiters.
+            </p>
+          </div>
+
+          <div class="rec-card">
+            <div class="rec-header">
+              <span class="rec-number">03</span>
+              <h3 class="rec-title">Cashier POS Terminal</h3>
+            </div>
+            <p class="rec-p">
+              The central billing interface. Manages table settlements, takeaway orders, raw printing triggers, and end-of-shift drawer closures.
+            </p>
+          </div>
+
+          <div class="rec-card">
+            <div class="rec-header">
+              <span class="rec-number">04</span>
+              <h3 class="rec-title">Order Status Monitor</h3>
+            </div>
+            <p class="rec-p">
+              An external TV display for customers showing the status of takeaway orders (Preparing vs. Ready), integrated with an automated audio calling system.
+            </p>
+          </div>
+
+          <div class="rec-card">
+            <div class="rec-header">
+              <span class="rec-number">05</span>
+              <h3 class="rec-title">Remote Owner Dashboard</h3>
+            </div>
+            <p class="rec-p">
+              A secure cloud portal for ownership to track live sales, calculate food costs, manage employee payroll, and monitor net profits from anywhere in the world.
+            </p>
+          </div>
+
+          <div class="rec-card" style="border-color: var(--accent-emerald);">
+            <div class="rec-header">
+              <span class="rec-number" style="background: var(--accent-emerald-glow); color: var(--accent-emerald);">⚙️</span>
+              <h3 class="rec-title">1-Click DevOps Automation</h3>
+            </div>
+            <p class="rec-p">
+              Wrote custom Windows Batch scripts so non-technical restaurant staff can launch the entire ecosystem, clear cache, and resolve local IP conflicts with a single click.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= 05. PROJECT GALLERY ================= -->
+    <section class="cs-gallery section-spacing" id="gallery">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-tag">05 / High-Resolution Showcase</span>
+          <h2 class="section-heading">System Interfaces</h2>
+          <p class="section-sub">Actual production screenshots demonstrating the tailored UI/UX for different restaurant roles.</p>
+        </div>
+
+        <div class="gallery-grid">
+          
+          <div class="gallery-card">
+            <img src="../assets/screenshot_pos.png" alt="POS Terminal UI" style="width: 100%; border-bottom: 1px solid var(--border-subtle); display: block;">
+            <div class="gal-info">
+              <h4 class="gal-title">Cashier POS Terminal</h4>
+              <p class="gal-desc">Fast, touch-optimized billing interface for immediate transaction processing and table management.</p>
+            </div>
+          </div>
+
+          <div class="gallery-card">
+            <img src="../assets/screenshot_kitchen.png" alt="Kitchen Display System" style="width: 100%; border-bottom: 1px solid var(--border-subtle); display: block;">
+            <div class="gal-info">
+              <h4 class="gal-title">Kitchen Display System (KDS)</h4>
+              <p class="gal-desc">High-contrast, distraction-free view for chefs to track incoming tickets and preparation timers.</p>
+            </div>
+          </div>
+
+          <div class="gallery-card">
+            <img src="../assets/screenshot_waiter.png" alt="Waiter Tablet UI" style="width: 100%; border-bottom: 1px solid var(--border-subtle); display: block;">
+            <div class="gal-info">
+              <h4 class="gal-title">Floor Waiter Tablet PWA</h4>
+              <p class="gal-desc">Mobile-first Progressive Web App allowing floor staff to submit orders directly to the kitchen from the table.</p>
+            </div>
+          </div>
+
+          <div class="gallery-card">
+            <img src="../assets/screenshot_admin_dashboard.png" alt="Admin Dashboard" style="width: 100%; border-bottom: 1px solid var(--border-subtle); display: block;">
+            <div class="gal-info">
+              <h4 class="gal-title">Remote Owner Dashboard</h4>
+              <p class="gal-desc">Cloud-synced analytics portal for ownership to review sales metrics, inventory, and shift closures remotely.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= 06. FINAL TAKEAWAY ================= -->
+    <section class="cs-takeaway section-spacing" id="takeaway">
+      <div class="container">
+        
+        <div class="takeaway-box">
+          <div class="takeaway-tag">06 / Professional Takeaway</div>
+          <h2 class="takeaway-heading">Bulletproof Systems for High-Pressure Environments</h2>
+          <p class="takeaway-p">
+            The FOUSH project is a deep dive into local networking, WebSocket synchronization, cloud database design, and hardware integration. It highlights a critical BIS (Business Information Systems) philosophy: <strong>Technology must adapt to the physical reality of the business, not the other way around.</strong> By engineering an Offline-First architecture and bypassing standard browser limitations for raw ESC/POS printing, the system ensures the restaurant never skips a beat—even when the internet does.
+          </p>
+          
+          <div class="takeaway-footer">
+            <div class="author-block">
+              <div class="author-avatar">AA</div>
+              <div>
+                <div class="author-name">Atef Elasklany</div>
+                <div class="author-title">Data Analyst | Business Systems Developer</div>
+              </div>
+            </div>
+            <div class="takeaway-actions">
+              <a href="../projects.html" class="btn btn-secondary">← Back to Projects</a>
+              <a href="../index.html#contact" class="btn btn-primary">Discuss This Project →</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= SITE FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-left">
+        <div class="footer-brand">Atef Elasklany</div>
+        <p class="footer-sub">Data Analyst & Business Systems Developer • BIS Graduate</p>
+      </div>
+      <div class="footer-links">
+        <a href="../projects.html" class="footer-link">Projects</a>
+        <a href="../index.html#capabilities" class="footer-link">Capabilities</a>
+        <a href="../index.html#about" class="footer-link">About</a>
+        <a href="../index.html#contact" class="footer-link">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/app.js"></script>
+</body>
+</html>

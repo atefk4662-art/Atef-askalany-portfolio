@@ -1,0 +1,10 @@
+# Project folders (source files, not part of portfolio site)
+foush project/
+ustomer behavior project/
+Triple_Seven_Portfolio.pdf
+
+# System files
+.DS_Store
+Thumbs.db
+*.log
+node_modules/
