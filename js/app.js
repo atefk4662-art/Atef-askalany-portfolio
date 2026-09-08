@@ -1,5 +1,5 @@
 /**
- * ATEF ASKLANDY PORTFOLIO — CORE APPLICATION SCRIPT
+ * ATEF ELASKLANY PORTFOLIO — CORE APPLICATION SCRIPT
  * Handles:
  * 1. Interactive tabs for the 4-tier BI dashboard ecosystem (in Case Studies)
  * 2. Smooth anchor scrolling across sections

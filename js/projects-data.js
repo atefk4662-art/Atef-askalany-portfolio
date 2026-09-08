@@ -1,5 +1,5 @@
 /**
- * ATEF ASKLANDY PORTFOLIO — CENTRALIZED PROJECT DATA
+ * ATEF ELASKLANY PORTFOLIO — CENTRALIZED PROJECT DATA
  * Single source of truth for all projects.
  * Used by: index.html (featured preview), projects.html (full catalog), admin.html (management)
  */
@@ -10,7 +10,7 @@ const PROJECTS = [
     title: "ShopEasy Marketing Analytics",
     category: "data",
     categoryLabel: "E-Commerce & Marketing Analytics",
-    description: "Helped an e-commerce brand find out exactly why they were losing sales. I built an interactive dashboard that tracked customer behavior, leading to clear strategies that stopped the drop in sales and improved customer satisfaction.",
+    description: "Conducted an end-to-end data audit on e-commerce customer behavior to diagnose conversion drop-offs. Built an interactive Power BI dashboard suite and customer sentiment pipeline to uncover key retention drivers.",
     coverImage: "assets/shopeasy_cover.jpg",
     tools: ["SQL", "Power BI", "Python", "KPI Architecture", "Sentiment Analysis"],
     metrics: [
@@ -28,7 +28,7 @@ const PROJECTS = [
     title: "Triple Seven Strategic System",
     category: "systems",
     categoryLabel: "Systems & Software Architecture",
-    description: "Built a complete, highly secure management system for gaming lounges. It gives the owners 100% control over their business, tracks profits in real-time, and prevents any financial leaks during employee shifts.",
+    description: "Architected and deployed a multi-branch gaming lounge management platform. Features real-time P&L synchronization, shift-level financial audits, and zero-trust remote network tunneling.",
     coverImage: "assets/triple_seven_cover.jpg",
     tools: ["JavaScript", "PHP", "MySQL", "Tailscale", "System Architecture"],
     metrics: [
@@ -46,7 +46,7 @@ const PROJECTS = [
     title: "FOUSH Restaurant POS",
     category: "systems",
     categoryLabel: "Systems & Software Architecture",
-    description: "Created a smart Point of Sale (POS) system for restaurants that never stops working, even if the internet disconnects. It speeds up orders between the waiters and the kitchen, and lets the owner monitor profits live from anywhere.",
+    description: "Engineered a high-availability Point of Sale (POS) ecosystem with offline-first architecture, real-time kitchen display synchronization, and cloud management for multi-station restaurant operations.",
     coverImage: "assets/foush_real_cover.png",
     tools: ["JavaScript", "Node.js", "Firebase", "PWA", "ESC/POS", "WebSockets"],
     metrics: [
@@ -63,15 +63,15 @@ const PROJECTS = [
     id: "customer-behavior",
     title: "Customer Shopping Behavior",
     category: "data",
-    categoryLabel: "Data & Analytics",
-    description: "Analyzed data from thousands of purchases to help a retail business understand what makes customers come back. The insights helped the business target the right age groups and build effective customer loyalty programs.",
+    categoryLabel: "Data Analytics & SQL",
+    description: "Analyzed 3,900+ retail consumer transactions to evaluate demographic purchase trends, repeat buyer behaviors, and subscription uptake. Formulated 5 actionable business strategies to optimize loyalty programs.",
     coverImage: "assets/customer_behavior_cover.jpg",
     tools: ["Python", "Pandas", "PostgreSQL", "SQL", "Power BI"],
     metrics: [
       { value: "3,900", label: "Transactions Analyzed" },
-      { value: "5", label: "Key Business Strategies" }
+      { value: "5", label: "Strategic Action Plans" }
     ],
-    featured: false,
+    featured: true,
     status: "completed",
     caseStudyUrl: "projects/customer-behavior.html",
     order: 4
