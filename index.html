@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Atef Elasklany | Data Analyst & Business Systems Developer</title>
-  <meta name="description" content="Portfolio of Atef Elasklany — BIS Graduate, Data Analyst & Business Systems Developer. Turning complex business requirements into actionable data insights, BI dashboards, and practical systems." />
+  <meta name="description" content="Official Portfolio of Atef Elasklany — BIS Graduate, Data Analyst & Business Systems Developer. Translating complex business problems into actionable data models, interactive BI dashboards, and robust systems." />
   
   <!-- Google Fonts: Plus Jakarta Sans, Inter, JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -17,7 +17,7 @@
 <body class="dark-theme">
 
   <!-- ================= TOP NAVIGATION BAR ================= -->
-  <header class="site-header">
+  <header class="site-header" id="header">
     <div class="nav-container">
       <a href="index.html" class="brand-logo">
         <span class="logo-name">Atef Elasklany</span>
@@ -26,97 +26,172 @@
         </span>
       </a>
 
-      <nav class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="projects.html">Projects</a>
-        <a href="#capabilities">Capabilities</a>
-        <a href="#framework">Methodology</a>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
+      <nav class="nav-links" id="nav-links">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#capabilities" class="nav-link">Capabilities</a>
+        <a href="#methodology" class="nav-link">Approach</a>
+        <a href="#work" class="nav-link">Selected Work</a>
+        <a href="#journey" class="nav-link">Journey</a>
+        <a href="#skills" class="nav-link">Skills</a>
       </nav>
 
       <div class="nav-actions">
-        <a href="#contact" class="btn btn-sm btn-primary">Get In Touch</a>
+        <a href="#contact" class="btn btn-sm btn-primary">Let's Talk</a>
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </div>
     </div>
   </header>
 
   <main>
 
-    <!-- ================= 01. HOMEPAGE HERO SECTION ================= -->
+    <!-- ================= 01. EDITORIAL HERO SECTION ================= -->
     <section class="hp-hero section-spacing" id="home">
       <div class="container">
         
-        <div class="hp-hero-content">
-          <div class="hero-badge-wrap">
-            <span class="badge badge-primary">Data Analyst & Business Systems Developer</span>
-            <span class="badge badge-subtle">B.Sc. in BIS • Egyptian Russian University</span>
-          </div>
+        <div class="hero-editorial-wrapper">
+          <div class="hero-text-block reveal-on-scroll">
+            
+            <div class="hero-badge-wrap">
+              <span class="badge badge-primary">Data Analyst & Business Systems Developer</span>
+              <span class="badge badge-subtle">B.Sc. in BIS • Egyptian Russian University</span>
+            </div>
 
-          <h1 class="hp-hero-title">
-            I understand business problems, work with data, and turn analysis into <span class="gradient-text">practical solutions</span>.
-          </h1>
+            <h1 class="hp-hero-title">
+              I understand business problems, work with data, and turn analysis into <span class="gradient-text">practical solutions</span>.
+            </h1>
 
-          <p class="hp-hero-description">
-            Bridging business process analysis, SQL & Python data modeling, and interactive Power BI dashboards to diagnose operational bottlenecks, uncover revenue opportunities, and architect robust system solutions.
-          </p>
+            <p class="hp-hero-description">
+              Bridging business process analysis, exploratory SQL & Python modeling, and executive Power BI dashboards to diagnose operational bottlenecks, uncover revenue growth opportunities, and engineer robust system tools.
+            </p>
 
-          <div class="hp-hero-actions">
-            <a href="#work" class="btn btn-primary">
-              View Selected Work
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-            </a>
-            <a href="#contact" class="btn btn-secondary">
-              Let's Discuss a Project
-            </a>
+            <div class="hp-hero-actions">
+              <a href="#work" class="btn btn-primary btn-lg">
+                Explore Selected Work
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+              <a href="#contact" class="btn btn-secondary btn-lg">
+                Let's Discuss a Project
+              </a>
+            </div>
+
           </div>
 
           <!-- Value / Competency Strip -->
-          <div class="hero-trust-grid">
+          <div class="hero-trust-grid reveal-on-scroll">
             <div class="trust-item">
-              <span class="trust-icon">📊</span>
+              <div class="trust-icon-box">📊</div>
               <div>
                 <strong class="trust-title">Data Analytics & BI</strong>
-                <p class="trust-desc">KPI architecture, SQL queries, trend modeling & executive dashboards</p>
+                <p class="trust-desc">KPI architecture, complex SQL aggregations, trend modeling & executive dashboards</p>
               </div>
             </div>
+
             <div class="trust-item">
-              <span class="trust-icon">💼</span>
+              <div class="trust-icon-box">💼</div>
               <div>
-                <strong class="trust-title">Business & Process Analysis</strong>
-                <p class="trust-desc">Requirements modeling, Data Flow Diagrams (DFD) & commercial logic</p>
+                <strong class="trust-title">Business & Systems Analysis</strong>
+                <p class="trust-desc">Requirements elicitation, Data Flow Diagrams (DFD) & commercial process logic</p>
               </div>
             </div>
+
             <div class="trust-item">
-              <span class="trust-icon">⚡</span>
+              <div class="trust-icon-box">⚡</div>
               <div>
-                <strong class="trust-title">Systems & Database Design</strong>
-                <p class="trust-desc">Relational schemas (ERD), full-stack data tools & backend APIs</p>
+                <strong class="trust-title">Systems & Database Engineering</strong>
+                <p class="trust-desc">Relational schemas (ERD), full-stack data tools & backend integrations</p>
               </div>
             </div>
           </div>
+
         </div>
 
       </div>
     </section>
 
-    <!-- ================= 02. CORE DIFFERENTIATOR (THE BIS TRIAD) ================= -->
-    <section class="hp-differentiator section-spacing">
+    <!-- ================= 02. CHAPTER 01: ABOUT & PHILOSOPHY ================= -->
+    <section class="hp-about section-spacing" id="about">
       <div class="container">
         
         <div class="section-header">
-          <span class="section-tag">The BIS Advantage</span>
-          <h2 class="section-heading">Why Combine Business Analysis, Data & Systems?</h2>
-          <p class="section-sub">Most initiatives fall short when data analysts lack business context, or developers build tools without analyzing core performance metrics.</p>
+          <span class="section-tag">Chapter 01 // Identity</span>
+          <h2 class="section-heading">Trained at the Intersection of Strategy & Code</h2>
+          <p class="section-sub">A multidisciplinary background dedicated to transforming organizational ambiguity into clear, data-backed direction.</p>
         </div>
 
-        <div class="differentiator-grid">
+        <div class="about-grid reveal-on-scroll">
+          
+          <div class="about-text-col">
+            <blockquote class="editorial-quote">
+              "Data without business context produces vanity charts. Systems built without performance metrics create operational blindspots. The real value is connecting both."
+            </blockquote>
+
+            <p class="about-p">
+              I hold a <strong>B.Sc. in Business Information Systems (BIS) from Egyptian Russian University</strong>. Unlike isolated software development or generic business administration, the BIS discipline specifically prepares professionals to bridge executive management goals with technical architecture.
+            </p>
+
+            <p class="about-p">
+              Whether diagnosing customer retention leaks for e-commerce brands, designing relational database schemas for operational platforms, or authoring interactive Power BI suites, I approach every project with commercial rigor and engineering discipline.
+            </p>
+
+            <div class="about-highlights">
+              <div class="ah-item">
+                <span class="ah-label">Education</span>
+                <strong>B.Sc. in Business Information Systems (BIS)</strong>
+              </div>
+              <div class="ah-item">
+                <span class="ah-label">Institution</span>
+                <strong>Egyptian Russian University</strong>
+              </div>
+              <div class="ah-item">
+                <span class="ah-label">Core Specialization</span>
+                <strong>Data Analytics, Business Intelligence & Solution Architecture</strong>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-stat-col">
+            <div class="about-stat-card">
+              <div class="stat-badge">FOUNDATION</div>
+              <div class="stat-big-num">BIS</div>
+              <div class="stat-label">Multidisciplinary Training</div>
+              <p class="stat-desc">Integrated curriculum spanning database design, statistical modeling, business analysis, and software engineering.</p>
+            </div>
+            
+            <div class="about-stat-card">
+              <div class="stat-badge">METHODOLOGY</div>
+              <div class="stat-big-num">End-to-End</div>
+              <div class="stat-label">Problem-Driven Execution</div>
+              <p class="stat-desc">From initial stakeholder discovery and schema mapping to exploratory SQL queries and interactive executive reporting.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= 03. CHAPTER 02: THE BIS TRIAD ================= -->
+    <section class="hp-differentiator section-spacing" id="triad">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-tag">Chapter 02 // Strategic Advantage</span>
+          <h2 class="section-heading">Why Combine Business, Data & Systems?</h2>
+          <p class="section-sub">A complete 3-pillar perspective that ensures analytical findings translate directly into operational solutions.</p>
+        </div>
+
+        <div class="differentiator-grid reveal-on-scroll">
           
           <div class="diff-card">
             <div class="diff-number">01</div>
             <h3 class="diff-title">1. Understand Business Needs</h3>
             <p class="diff-desc">
-              Before running queries or building models, I analyze operational workflows, stakeholder requirements, and commercial objectives to identify the root challenge.
+              Before writing code or running queries, I analyze operational workflows, stakeholder requirements, and commercial objectives to define the core problem and target KPIs.
             </p>
             <div class="diff-tags">
               <span>Requirements Gathering</span>
@@ -129,7 +204,7 @@
             <div class="diff-number">02</div>
             <h3 class="diff-title">2. Clean & Model Data</h3>
             <p class="diff-desc">
-              I extract, clean, and structure raw transactional datasets to audit conversion funnels, evaluate customer behavior, and isolate seasonal trends.
+              I extract, clean, and structure raw transactional datasets to audit conversion funnels, evaluate customer behavior, and isolate seasonal anomalies with statistical rigor.
             </p>
             <div class="diff-tags">
               <span>SQL Aggregations</span>
@@ -142,11 +217,11 @@
             <div class="diff-number">03</div>
             <h3 class="diff-title">3. Deliver Practical Systems</h3>
             <p class="diff-desc">
-              I transform findings into actionable deliverables: whether that is an automated Power BI dashboard, a relational database schema, or an operational web tool.
+              I transform findings into robust deliverables: whether that is an automated Power BI dashboard, a relational database schema (ERD), or an operational web tool.
             </p>
             <div class="diff-tags">
               <span>Power BI Dashboards</span>
-              <span>Database Architecture (ERD)</span>
+              <span>Database Schemas (ERD)</span>
               <span>Custom Web Tools</span>
             </div>
           </div>
@@ -156,48 +231,68 @@
       </div>
     </section>
 
-    <!-- ================= 03. WHAT I DO (CORE CAPABILITIES) ================= -->
+    <!-- ================= 04. CHAPTER 03: CAPABILITIES ================= -->
     <section class="hp-capabilities section-spacing" id="capabilities">
       <div class="container">
         
         <div class="section-header">
-          <span class="section-tag">Core Capabilities</span>
-          <h2 class="section-heading">What I Can Help You Accomplish</h2>
-          <p class="section-sub">Outcome-oriented services tailored for businesses, teams, and technical organizations.</p>
+          <span class="section-tag">Chapter 03 // What I Do</span>
+          <h2 class="section-heading">Core Capabilities & Deliverables</h2>
+          <p class="section-sub">Clear, outcome-oriented engagement areas designed for businesses, teams, and technical organizations.</p>
         </div>
 
-        <div class="capabilities-grid">
+        <div class="capabilities-grid reveal-on-scroll">
           
           <div class="cap-card">
-            <div class="cap-icon">📈</div>
+            <div class="cap-icon-wrap">📈</div>
             <h3 class="cap-title">Data Analytics & Business Insights</h3>
             <p class="cap-desc">
-              Transforming raw transactional, retail, and marketing data into clear diagnostic findings. Identifying customer churn, demographic trends, and revenue drivers using SQL and Python.
+              Transforming messy, disparate transactional, marketing, and operational data into clear analytical findings. Diagnosing churn risks, conversion leaks, and growth opportunities using SQL and Python.
             </p>
+            <ul class="cap-list">
+              <li>Exploratory Data Analysis (EDA)</li>
+              <li>Customer Segmentation & Behavioral Analysis</li>
+              <li>Sales Funnel & Conversion Diagnostics</li>
+            </ul>
           </div>
 
           <div class="cap-card">
-            <div class="cap-icon">📊</div>
-            <h3 class="cap-title">Business Intelligence & KPI Dashboards</h3>
+            <div class="cap-icon-wrap">📊</div>
+            <h3 class="cap-title">Business Intelligence & Dashboards</h3>
             <p class="cap-desc">
-              Designing structured, interactive Power BI and Excel dashboards with automated KPIs, dynamic filters, and clean visual hierarchy for decision-makers.
+              Designing tailored, interactive Power BI and Excel dashboards with automated metrics, dynamic slicers, and clean visual hierarchy for executives and operational leads.
             </p>
+            <ul class="cap-list">
+              <li>Executive KPI Tracking Dashboards</li>
+              <li>DAX Modeling & Automated Calculations</li>
+              <li>Visual Data Storytelling & Reporting</li>
+            </ul>
           </div>
 
           <div class="cap-card">
-            <div class="cap-icon">📑</div>
+            <div class="cap-icon-wrap">📑</div>
             <h3 class="cap-title">Business & Systems Analysis</h3>
             <p class="cap-desc">
-              Translating ambiguous business needs into structured functional specifications, Data Flow Diagrams (DFD), and normalized relational database schemas (ERD).
+              Mapping organizational workflows, capturing functional specifications, building Data Flow Diagrams (DFD), and designing normalized relational database schemas (ERD).
             </p>
+            <ul class="cap-list">
+              <li>Data Flow Diagrams (DFD) & UML Modeling</li>
+              <li>Entity Relationship Diagrams (ERD)</li>
+              <li>Process Optimization & Functional Specs</li>
+            </ul>
           </div>
 
           <div class="cap-card">
-            <div class="cap-icon">💻</div>
+            <div class="cap-icon-wrap">💻</div>
             <h3 class="cap-title">Data-Driven Solution Development</h3>
             <p class="cap-desc">
-              Building custom web tools, operational POS interfaces, and backend database integrations that streamline daily workflows and automate reporting.
+              Building custom web applications, operational Point of Sale (POS) interfaces, and backend database integrations that streamline workflows and automate reporting.
             </p>
+            <ul class="cap-list">
+              <li>Full-Stack Web & Internal Tools</li>
+              <li>Relational Database Implementations</li>
+              <li>Offline-First & Cloud Synchronization</li>
+            </ul>
           </div>
 
         </div>
@@ -205,40 +300,52 @@
       </div>
     </section>
 
-    <!-- ================= 04. METHODOLOGY (HOW I WORK) ================= -->
-    <section class="hp-methodology section-spacing" id="framework">
+    <!-- ================= 05. CHAPTER 04: PROBLEM-SOLVING FRAMEWORK ================= -->
+    <section class="hp-methodology section-spacing" id="methodology">
       <div class="container">
         
         <div class="section-header">
-          <span class="section-tag">Structured Execution</span>
+          <span class="section-tag">Chapter 04 // Structured Execution</span>
           <h2 class="section-heading">Problem-Solving Framework</h2>
-          <p class="section-sub">A disciplined 4-stage methodology that bridges business ambiguity and concrete delivery.</p>
+          <p class="section-sub">A disciplined 4-stage methodology that bridges business ambiguity and concrete functional delivery.</p>
         </div>
 
-        <div class="framework-steps">
+        <div class="framework-steps reveal-on-scroll">
           
           <div class="f-step">
             <div class="f-num">01</div>
             <h3 class="f-title">Understand & Scope</h3>
-            <p class="f-desc">Engage stakeholders to define core objectives, map current workflows, and establish targeted success KPIs.</p>
+            <p class="f-desc">Engage stakeholders to define core objectives, map current operational workflows, and establish targeted success KPIs.</p>
+            <div class="f-deliverable">
+              <strong>Deliverables:</strong> Problem Statement, KPI Matrix, Process Flow (DFD)
+            </div>
           </div>
 
           <div class="f-step">
             <div class="f-num">02</div>
             <h3 class="f-title">Prepare & Structure</h3>
-            <p class="f-desc">Extract raw datasets, audit data integrity, eliminate anomalies, and establish clean relational structures.</p>
+            <p class="f-desc">Extract raw datasets, audit data integrity, eliminate anomalies, and establish clean relational schemas and normalized models.</p>
+            <div class="f-deliverable">
+              <strong>Deliverables:</strong> Clean Schema (ERD), Data Audit Log, Python Pipeline
+            </div>
           </div>
 
           <div class="f-step">
             <div class="f-num">03</div>
             <h3 class="f-title">Analyze & Discover</h3>
-            <p class="f-desc">Execute analytical SQL queries, segment behaviors, uncover operational leaks, and validate findings.</p>
+            <p class="f-desc">Execute analytical SQL queries, segment user behaviors, uncover operational leaks, and validate statistical hypotheses.</p>
+            <div class="f-deliverable">
+              <strong>Deliverables:</strong> SQL Aggregations, Statistical Insights, Root Cause Analysis
+            </div>
           </div>
 
           <div class="f-step">
             <div class="f-num">04</div>
             <h3 class="f-title">Deliver & Implement</h3>
-            <p class="f-desc">Deploy interactive BI dashboards, document system architectures, and provide clear strategic recommendations.</p>
+            <p class="f-desc">Deploy interactive BI dashboards, document system architectures, and provide clear strategic recommendations for action.</p>
+            <div class="f-deliverable">
+              <strong>Deliverables:</strong> Power BI Suite, System Documentation, Strategic Action Plan
+            </div>
           </div>
 
         </div>
@@ -246,48 +353,105 @@
       </div>
     </section>
 
-    <!-- ================= 05. ABOUT SECTION ================= -->
-    <section class="hp-about section-spacing" id="about">
+    <!-- ================= 06. CHAPTER 05: SELECTED WORK / PROJECTS ================= -->
+    <section class="hp-projects section-spacing" id="work">
       <div class="container">
         
-        <div class="about-grid">
+        <div class="section-header flex-between">
+          <div>
+            <span class="section-tag">Chapter 05 // Proof of Work</span>
+            <h2 class="section-heading">Featured Projects & Case Studies</h2>
+            <p class="section-sub">A curated selection of data analytics audits, BI dashboard ecosystems, and operational software systems.</p>
+          </div>
+          <a href="projects.html" class="btn btn-secondary d-none d-md-inline-flex">
+            View All Projects →
+          </a>
+        </div>
+
+        <!-- Featured projects rendered dynamically by app.js -->
+        <div class="project-grid reveal-on-scroll" id="featured-projects-grid">
+          <!-- Cards injected dynamically from projects-data.js -->
+        </div>
+
+        <div class="view-all-cta" style="text-align: center; margin-top: 3rem;">
+          <a href="projects.html" class="btn btn-primary btn-lg" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.9rem 2rem; font-size: 1.05rem;">
+            Explore Full Project Catalog
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= 07. CHAPTER 06: PROFESSIONAL JOURNEY ================= -->
+    <section class="hp-journey section-spacing" id="journey">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-tag">Chapter 06 // Track Record</span>
+          <h2 class="section-heading">Professional Journey & Milestones</h2>
+          <p class="section-sub">Key educational foundations, project deployments, and technical achievements.</p>
+        </div>
+
+        <div class="journey-timeline reveal-on-scroll">
           
-          <div class="about-text-col">
-            <span class="section-tag">About Me</span>
-            <h2 class="section-heading">Combining Business Strategy with Technical Systems</h2>
-            
-            <p class="about-p">
-              I hold a <strong>B.Sc. in Business Information Systems (BIS) from Egyptian Russian University</strong>. The BIS discipline focuses specifically on connecting commercial operations with technical execution — enabling me to communicate effectively with both business stakeholders and technical teams.
-            </p>
-
-            <p class="about-p">
-              Whether conducting an in-depth data audit to understand customer buying patterns or designing a relational database schema for an operational platform, my goal is always to deliver clear, practical, and measurable results.
-            </p>
-
-            <div class="about-highlights">
-              <div class="ah-item">
-                <strong>Education:</strong> B.Sc. in Business Information Systems (BIS)
-              </div>
-              <div class="ah-item">
-                <strong>University:</strong> Egyptian Russian University
-              </div>
-              <div class="ah-item">
-                <strong>Specialization:</strong> Data Analytics, Business Intelligence & Systems Design
-              </div>
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <span class="timeline-period">Academic Foundation</span>
+              <h3 class="timeline-title">B.Sc. in Business Information Systems (BIS)</h3>
+              <span class="timeline-meta">Egyptian Russian University</span>
+              <p class="timeline-desc">
+                Graduated with comprehensive training connecting organizational business strategies with relational databases, statistical data analytics, systems analysis, and enterprise software design.
+              </p>
             </div>
           </div>
 
-          <div class="about-stat-col">
-            <div class="about-stat-card">
-              <div class="stat-big-num">BIS</div>
-              <div class="stat-label">Academic Foundation</div>
-              <p class="stat-desc">Integrated training across business analysis, data management, and software systems.</p>
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <span class="timeline-period">Case Study & Analytical Audit</span>
+              <h3 class="timeline-title">ShopEasy E-Commerce Marketing Analytics</h3>
+              <span class="timeline-meta">Data Analytics & Business Intelligence</span>
+              <p class="timeline-desc">
+                Conducted a multi-channel marketing audit on e-commerce transaction data. Built a 4-tier interactive Power BI dashboard and customer sentiment model to diagnose conversion drop-offs.
+              </p>
             </div>
-            
-            <div class="about-stat-card">
-              <div class="stat-big-num">End-to-End</div>
-              <div class="stat-label">Analytical Approach</div>
-              <p class="stat-desc">From initial problem discovery and data cleansing to interactive reporting and systems delivery.</p>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <span class="timeline-period">Software & Cloud Architecture</span>
+              <h3 class="timeline-title">FOUSH Restaurant Point of Sale (POS)</h3>
+              <span class="timeline-meta">Operational System Design & Development</span>
+              <p class="timeline-desc">
+                Designed and built a high-availability, offline-first restaurant management system with real-time kitchen displays, receipt printing protocols, and cloud sync for multi-station operations.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <span class="timeline-period">Enterprise Security & Multi-Branch Systems</span>
+              <h3 class="timeline-title">Triple Seven Strategic Management Platform</h3>
+              <span class="timeline-meta">Systems Architecture & Financial Auditing</span>
+              <p class="timeline-desc">
+                Architected a centralized management system for gaming lounges featuring live P&L synchronization, shift-level financial audits, and zero-trust Tailscale VPN network security.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <span class="timeline-period">Consumer Behavior & SQL Modeling</span>
+              <h3 class="timeline-title">Customer Shopping Behavior Analysis</h3>
+              <span class="timeline-meta">PostgreSQL • Python • Power BI</span>
+              <p class="timeline-desc">
+                Analyzed 3,900+ consumer retail transactions using SQL to evaluate demographic purchase trends, repeat buyer behaviors, and formulated 5 actionable business strategies.
+              </p>
             </div>
           </div>
 
@@ -296,24 +460,24 @@
       </div>
     </section>
 
-    <!-- ================= 06. SKILLS MATRIX ================= -->
+    <!-- ================= 08. CHAPTER 07: SKILLS MATRIX ================= -->
     <section class="hp-skills section-spacing" id="skills">
       <div class="container">
         
         <div class="section-header">
-          <span class="section-tag">Technical Competencies</span>
-          <h2 class="section-heading">Structured Skills Matrix</h2>
-          <p class="section-sub">Organized by core functional domains and proven technical proficiencies.</p>
+          <span class="section-tag">Chapter 07 // Technical Toolkit</span>
+          <h2 class="section-heading">Structured Competencies Matrix</h2>
+          <p class="section-sub">Categorized capabilities organized across data analytics, business analysis, and solution development.</p>
         </div>
 
-        <div class="skills-grid">
+        <div class="skills-grid reveal-on-scroll">
           
           <div class="skill-category">
             <h3 class="cat-title">Data Analytics & Modeling</h3>
             <div class="pill-group">
               <span class="skill-pill">SQL (PostgreSQL, SQL Server, MySQL)</span>
               <span class="skill-pill">Python (Pandas, NumPy)</span>
-              <span class="skill-pill">Data Cleansing & Transformation</span>
+              <span class="skill-pill">Data Cleansing & Wrangling</span>
               <span class="skill-pill">Exploratory Data Analysis (EDA)</span>
               <span class="skill-pill">Statistical Analysis</span>
               <span class="skill-pill">Advanced Excel Modeling</span>
@@ -321,14 +485,14 @@
           </div>
 
           <div class="skill-category">
-            <h3 class="cat-title">Business Intelligence & Visualization</h3>
+            <h3 class="cat-title">Business Intelligence & Reporting</h3>
             <div class="pill-group">
               <span class="skill-pill">Power BI Dashboards</span>
               <span class="skill-pill">KPI Architecture</span>
               <span class="skill-pill">DAX & Data Modeling</span>
               <span class="skill-pill">Matplotlib & Seaborn</span>
-              <span class="skill-pill">Executive Reporting</span>
-              <span class="skill-pill">Visual Data Storytelling</span>
+              <span class="skill-pill">Executive Visual Storytelling</span>
+              <span class="skill-pill">Automated Reporting</span>
             </div>
           </div>
 
@@ -361,41 +525,16 @@
       </div>
     </section>
 
-    <!-- ================= 07. SELECTED PROJECTS ================= -->
-    <section class="hp-projects section-spacing" id="work">
-      <div class="container">
-        
-        <div class="section-header">
-          <span class="section-tag">Proof of Work</span>
-          <h2 class="section-heading">Featured Projects & Case Studies</h2>
-          <p class="section-sub">A curated selection of data analytics, business intelligence, and system solutions.</p>
-        </div>
-
-        <!-- Featured projects rendered dynamically by app.js -->
-        <div class="project-grid" id="featured-projects-grid">
-          <!-- Cards injected dynamically from projects-data.js -->
-        </div>
-
-        <div class="view-all-cta" style="text-align: center; margin-top: 2.5rem;">
-          <a href="projects.html" class="btn btn-primary btn-lg" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.9rem 2rem; font-size: 1.05rem;">
-            Explore All Projects
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-          </a>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ================= 08. CONTACT SECTION & FOOTER ================= -->
+    <!-- ================= 09. CHAPTER 08: FINAL COLLABORATION & CONTACT ================= -->
     <section class="hp-contact section-spacing" id="contact">
       <div class="container">
         
-        <div class="contact-card">
+        <div class="contact-card reveal-on-scroll">
           <div class="contact-header">
-            <span class="section-tag">Let's Connect</span>
+            <span class="section-tag">Chapter 08 // Let's Connect</span>
             <h2 class="contact-title">Have a Project or Opportunity in Mind?</h2>
             <p class="contact-desc">
-              Whether you are looking to analyze business data, build an executive BI dashboard, or architect a practical system solution, I'm available to collaborate.
+              Whether you are looking to audit business data, build an executive BI dashboard, or architect a practical database system, I'm ready to collaborate and deliver measurable results.
             </p>
           </div>
 
@@ -412,7 +551,7 @@
 
             <a href="https://github.com/atefk4662-art" target="_blank" rel="noreferrer" class="channel-btn">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-              <span>GitHub Profile</span>
+              <span>GitHub Repositories</span>
             </a>
           </div>
         </div>
@@ -427,13 +566,14 @@
     <div class="container footer-container">
       <div class="footer-left">
         <div class="footer-brand">Atef Elasklany</div>
-        <p class="footer-sub">Data Analyst & Business Systems Developer • BIS Graduate</p>
+        <p class="footer-sub">Data Analyst & Business Systems Developer • BIS Graduate (ERU)</p>
       </div>
       <div class="footer-links">
-        <a href="projects.html" class="footer-link">Projects</a>
-        <a href="#capabilities" class="footer-link">Capabilities</a>
-        <a href="#framework" class="footer-link">Methodology</a>
+        <a href="#home" class="footer-link">Home</a>
         <a href="#about" class="footer-link">About</a>
+        <a href="#capabilities" class="footer-link">Capabilities</a>
+        <a href="#work" class="footer-link">Projects</a>
+        <a href="#journey" class="footer-link">Journey</a>
         <a href="#contact" class="footer-link">Contact</a>
       </div>
     </div>

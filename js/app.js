@@ -1,8 +1,12 @@
 /**
  * ATEF ELASKLANY PORTFOLIO — CORE APPLICATION SCRIPT
  * Handles:
- * 1. Interactive tabs for the 4-tier BI dashboard ecosystem (in Case Studies)
- * 2. Smooth anchor scrolling across sections
+ * 1. Dynamic Project Rendering & Filtering (Homepage + Projects Page)
+ * 2. IntersectionObserver for Scroll-Reveal Animations
+ * 3. Active Nav Link Tracking on Scroll
+ * 4. Mobile Navigation Drawer Toggle
+ * 5. Case Study Interactive Tabs Simulation
+ * 6. Smooth Anchor Scrolling
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -14,7 +18,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const filterBtns = document.querySelectorAll('.filter-btn');
   
   let currentProjects = typeof getProjects === 'function' ? getProjects() : [];
-  // Sort by order
   currentProjects.sort((a, b) => a.order - b.order);
 
   // Render Homepage Featured Projects
@@ -32,9 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (filterBtns.length > 0 && allGrid) {
     filterBtns.forEach(btn => {
       btn.addEventListener('click', () => {
-        // Remove active class from all
         filterBtns.forEach(b => b.classList.remove('active'));
-        // Add active to clicked
         btn.classList.add('active');
         
         const filterValue = btn.getAttribute('data-filter');
@@ -52,7 +53,81 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* -----------------------------------------------------------
-     2. Case Study Dashboard Tabs Simulation
+     2. Scroll-Reveal Animations (Intersection Observer)
+  ----------------------------------------------------------- */
+  const revealElements = document.querySelectorAll('.reveal-on-scroll');
+  if ('IntersectionObserver' in window && revealElements.length > 0) {
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-revealed');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      root: null,
+      threshold: 0.1,
+      rootMargin: '0px 0px -40px 0px'
+    });
+
+    revealElements.forEach(el => revealObserver.observe(el));
+  } else {
+    // Fallback if IntersectionObserver is not supported
+    revealElements.forEach(el => el.classList.add('is-revealed'));
+  }
+
+  /* -----------------------------------------------------------
+     3. Active Nav Link Tracking on Scroll
+  ----------------------------------------------------------- */
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav-links .nav-link');
+
+  if (sections.length > 0 && navLinks.length > 0) {
+    window.addEventListener('scroll', () => {
+      let currentSectionId = '';
+      const scrollPosition = window.pageYOffset + 140;
+
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.offsetHeight;
+        if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+          currentSectionId = section.getAttribute('id');
+        }
+      });
+
+      if (currentSectionId) {
+        navLinks.forEach(link => {
+          link.classList.remove('active');
+          const href = link.getAttribute('href');
+          if (href === `#${currentSectionId}` || href === `index.html#${currentSectionId}`) {
+            link.classList.add('active');
+          }
+        });
+      }
+    });
+  }
+
+  /* -----------------------------------------------------------
+     4. Mobile Navigation Drawer Toggle
+  ----------------------------------------------------------- */
+  const mobileToggle = document.getElementById('mobile-toggle');
+  const navLinksContainer = document.getElementById('nav-links');
+
+  if (mobileToggle && navLinksContainer) {
+    mobileToggle.addEventListener('click', () => {
+      navLinksContainer.classList.toggle('open');
+    });
+
+    // Close mobile menu when a nav link is clicked
+    navLinksContainer.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinksContainer.classList.remove('open');
+      });
+    });
+  }
+
+  /* -----------------------------------------------------------
+     5. Case Study Dashboard Tabs Simulation
   ----------------------------------------------------------- */
   const tabBtns = document.querySelectorAll('.tab-btn');
   const tabPanels = document.querySelectorAll('.tab-panel');
@@ -60,14 +135,11 @@ document.addEventListener('DOMContentLoaded', () => {
   if (tabBtns.length > 0) {
     tabBtns.forEach(btn => {
       btn.addEventListener('click', () => {
-        // Remove active from all tabs and panels
         tabBtns.forEach(b => b.classList.remove('active'));
         tabPanels.forEach(p => p.classList.remove('active'));
         
-        // Add active to clicked tab
         btn.classList.add('active');
         
-        // Show target panel
         const targetId = btn.getAttribute('data-tab');
         const targetPanel = document.getElementById(targetId);
         if (targetPanel) {
@@ -78,7 +150,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* -----------------------------------------------------------
-     3. Smooth Scrolling for Internal Links
+     6. Smooth Scrolling for Internal Anchor Links
   ----------------------------------------------------------- */
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -88,9 +160,13 @@ document.addEventListener('DOMContentLoaded', () => {
       const targetElement = document.querySelector(targetId);
       if (targetElement) {
         e.preventDefault();
-        targetElement.scrollIntoView({
-          behavior: 'smooth',
-          block: 'start'
+        const headerOffset = 70;
+        const elementPosition = targetElement.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
         });
       }
     });
