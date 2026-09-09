@@ -30,7 +30,7 @@
         <nav class="nav-links" id="nav-links">
           <a href="#home" class="nav-link active">Home</a>
           <a href="#about-me" class="nav-link">About Me</a>
-          <a href="#horizontal-projects" class="nav-link">Projects</a>
+          <a href="#featured-projects" class="nav-link">Projects</a>
           <a href="#capabilities" class="nav-link">Capabilities</a>
           <a href="#history" class="nav-link">Journey</a>
           <a href="#skills" class="nav-link">Skills</a>
@@ -187,7 +187,7 @@
               <span class="divider-line"></span>
               <span class="divider-text">PORTFOLIO</span>
             </div>
-            <a href="#horizontal-projects" class="btn btn-link-editorial hover-icon-down">
+            <a href="#featured-projects" class="btn btn-link-editorial hover-icon-down">
               <span>View My Work</span>
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>
             </a>
@@ -198,95 +198,167 @@
       </div>
     </section>
 
-    <!-- ================= 03. HORIZONTAL PROJECTS SHOWCASE (INSPIRED BY KHALED HABIB #horizontal-projects) ================= -->
-    <section class="kh-horizontal-projects-section overflow-hidden section-spacing" id="horizontal-projects">
-      <div class="container-fluid px-0">
+    <!-- ================= 03. FEATURED WORK SHOWCASE (1 + 3 HYBRID SHOWCASE) ================= -->
+    <section class="kh-projects-showcase section-spacing" id="featured-projects">
+      <div class="container">
         
-        <div class="container mb-4">
-          <div class="section-header flex-between">
-            <div>
-              <div class="editorial-divider">
-                <span class="divider-line"></span>
-                <span class="divider-text">Selected Work</span>
-              </div>
-              <h2 class="section-heading">Featured Projects & Systems</h2>
+        <div class="section-header flex-between">
+          <div>
+            <div class="editorial-divider">
+              <span class="divider-line"></span>
+              <span class="divider-text">Selected Work</span>
             </div>
-            <a href="projects.html" class="btn btn-outline-editorial">
-              <span>View All Projects</span>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-            </a>
+            <h2 class="section-heading">Featured Projects & Systems</h2>
+            <p class="section-sub">Real-world data analytics audits, executive BI ecosystems, and operational software systems.</p>
+          </div>
+          <a href="projects.html" class="btn btn-outline-editorial">
+            <span>View All Projects</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
+        </div>
+
+        <!-- 1. HERO FEATURED SPOTLIGHT: ShopEasy -->
+        <div class="hero-project-spotlight reveal-on-scroll">
+          <div class="hero-spotlight-content">
+            <div class="spotlight-badge-row">
+              <span class="badge badge-primary">Featured Analytics Case Study</span>
+              <span class="badge badge-subtle">E-Commerce & Marketing</span>
+            </div>
+            
+            <h3 class="spotlight-title">ShopEasy Marketing Analytics & Customer Retention Audit</h3>
+            
+            <p class="spotlight-desc">
+              Conducted an end-to-end data audit on e-commerce transaction data to diagnose conversion drop-offs. Built a 4-tier interactive Power BI dashboard suite and customer sentiment pipeline that identified core drop-off points and improved retention strategies.
+            </p>
+
+            <div class="spotlight-metrics-grid">
+              <div class="spotlight-metric">
+                <span class="s-val">8.5%</span>
+                <span class="s-lbl">Avg Conversion</span>
+              </div>
+              <div class="spotlight-metric">
+                <span class="s-val">2.98M</span>
+                <span class="s-lbl">Impressions Analyzed</span>
+              </div>
+              <div class="spotlight-metric">
+                <span class="s-val">357</span>
+                <span class="s-lbl">Reviews Modeled</span>
+              </div>
+            </div>
+
+            <div class="spotlight-tools">
+              <span class="tool-tag">SQL</span>
+              <span class="tool-tag">Power BI</span>
+              <span class="tool-tag">Python</span>
+              <span class="tool-tag">DAX</span>
+              <span class="tool-tag">Sentiment Analysis</span>
+            </div>
+
+            <div class="spotlight-action">
+              <a href="projects/shopeasy.html" class="btn btn-primary btn-lg">
+                <span>Explore Full Case Study</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="hero-spotlight-media">
+            <div class="spotlight-image-frame">
+              <img src="assets/shopeasy_cover.jpg" alt="ShopEasy Marketing Analytics Dashboard" class="spotlight-img" />
+              <div class="spotlight-img-overlay"></div>
+            </div>
+
+            <!-- Circular Accent Badge matching About Me aesthetic -->
+            <div class="spotlight-circular-badge">
+              <div class="rotate-badge">
+                <svg viewBox="0 0 300 300">
+                  <path id="spotlightCurvedText" fill="none" stroke="none" d="M 32.55,148.48 A 108.15,108.15 0 0 1 140.70,40.32 A 108.15,108.15 0 0 1 248.85,148.48 A 108.15,108.15 0 0 1 140.70,256.63 A 108.15,108.15 0 0 1 32.55,148.48 Z"></path>
+                  <text font-size="24" fill="#38BDF8" letter-spacing="2" font-weight="700">
+                    <textPath xlink:href="#spotlightCurvedText" side="left" startOffset="0">• POWER BI • SQL • ANALYTICS •</textPath>
+                  </text>
+                </svg>
+              </div>
+            </div>
           </div>
         </div>
 
-        <!-- Horizontal Scrollable Project Strip -->
-        <div class="kh-horizontal-strip-wrapper">
-          <div class="kh-horizontal-strip">
-            
-            <!-- Project 1: ShopEasy -->
-            <div class="kh-strip-card">
-              <a href="projects/shopeasy.html" class="kh-strip-link">
-                <div class="kh-strip-media">
-                  <img src="assets/shopeasy_cover.jpg" alt="ShopEasy Marketing Analytics" class="kh-strip-img" />
-                  <div class="kh-strip-gradient"></div>
-                  <div class="kh-strip-content">
-                    <span class="kh-strip-tag">E-Commerce & Marketing Analytics</span>
-                    <h3 class="kh-strip-title">ShopEasy Marketing Analytics Audit</h3>
-                    <p class="kh-strip-desc">End-to-end data audit diagnosing customer drop-offs with 4-tier interactive Power BI suite & sentiment analysis.</p>
-                    <span class="kh-strip-cta">Explore Case Study →</span>
-                  </div>
-                </div>
-              </a>
+        <!-- 2. SUPPORTING 3-COLUMN PROJECT GRID -->
+        <div class="supporting-projects-grid reveal-on-scroll">
+          
+          <!-- Card 1: FOUSH -->
+          <article class="supporting-project-card">
+            <div class="s-card-media">
+              <img src="assets/foush_real_cover.png" alt="FOUSH Restaurant POS" class="s-card-img" />
+              <div class="s-card-circle-tag">
+                <span>POS System</span>
+              </div>
             </div>
-
-            <!-- Project 2: FOUSH -->
-            <div class="kh-strip-card">
-              <a href="projects/foush.html" class="kh-strip-link">
-                <div class="kh-strip-media">
-                  <img src="assets/foush_real_cover.png" alt="FOUSH Restaurant POS" class="kh-strip-img" />
-                  <div class="kh-strip-gradient"></div>
-                  <div class="kh-strip-content">
-                    <span class="kh-strip-tag">Operational Software & Architecture</span>
-                    <h3 class="kh-strip-title">FOUSH Restaurant Point of Sale (POS)</h3>
-                    <p class="kh-strip-desc">High-availability offline-first POS system with live kitchen synchronization, thermal printing, and cloud management.</p>
-                    <span class="kh-strip-cta">Explore Case Study →</span>
-                  </div>
-                </div>
-              </a>
+            <div class="s-card-body">
+              <div class="s-card-badge">Operational Software & Architecture</div>
+              <h4 class="s-card-title">FOUSH Restaurant Point of Sale (POS)</h4>
+              <p class="s-card-desc">High-availability offline-first POS platform with real-time kitchen displays, receipt printing protocols, and cloud management.</p>
+              <div class="s-card-metrics">
+                <span class="m-pill"><strong>100%</strong> Offline-First</span>
+                <span class="m-pill"><strong>5</strong> Portals</span>
+                <span class="m-pill"><strong>Live</strong> Sync</span>
+              </div>
+              <div class="s-card-footer">
+                <a href="projects/foush.html" class="btn btn-secondary w-100">
+                  View Case Study →
+                </a>
+              </div>
             </div>
+          </article>
 
-            <!-- Project 3: Triple Seven -->
-            <div class="kh-strip-card">
-              <a href="projects/triple-seven.html" class="kh-strip-link">
-                <div class="kh-strip-media">
-                  <img src="assets/triple_seven_cover.jpg" alt="Triple Seven System" class="kh-strip-img" />
-                  <div class="kh-strip-gradient"></div>
-                  <div class="kh-strip-content">
-                    <span class="kh-strip-tag">Enterprise Management & Security</span>
-                    <h3 class="kh-strip-title">Triple Seven Strategic Management System</h3>
-                    <p class="kh-strip-desc">Multi-branch gaming lounge management with real-time P&L sync, shift audit logs, and zero-trust Tailscale VPN.</p>
-                    <span class="kh-strip-cta">Explore Case Study →</span>
-                  </div>
-                </div>
-              </a>
+          <!-- Card 2: Triple Seven -->
+          <article class="supporting-project-card">
+            <div class="s-card-media">
+              <img src="assets/triple_seven_cover.jpg" alt="Triple Seven Strategic Management System" class="s-card-img" />
+              <div class="s-card-circle-tag">
+                <span>Enterprise</span>
+              </div>
             </div>
-
-            <!-- Project 4: Customer Behavior -->
-            <div class="kh-strip-card">
-              <a href="projects/customer-behavior.html" class="kh-strip-link">
-                <div class="kh-strip-media">
-                  <img src="assets/customer_behavior_cover.jpg" alt="Customer Shopping Behavior" class="kh-strip-img" />
-                  <div class="kh-strip-gradient"></div>
-                  <div class="kh-strip-content">
-                    <span class="kh-strip-tag">Data Analytics & SQL Modeling</span>
-                    <h3 class="kh-strip-title">Customer Shopping Behavior Analysis</h3>
-                    <p class="kh-strip-desc">Analyzed 3,900+ retail consumer transactions with SQL and Power BI to evaluate demographic trends and formulate 5 growth strategies.</p>
-                    <span class="kh-strip-cta">Explore Case Study →</span>
-                  </div>
-                </div>
-              </a>
+            <div class="s-card-body">
+              <div class="s-card-badge">Enterprise Management & Security</div>
+              <h4 class="s-card-title">Triple Seven Strategic Management System</h4>
+              <p class="s-card-desc">Centralized multi-branch lounge operational software with shift financial audits, real-time P&L sync, and zero-trust Tailscale VPN.</p>
+              <div class="s-card-metrics">
+                <span class="m-pill"><strong>100%</strong> Custom Built</span>
+                <span class="m-pill"><strong>Live</strong> P&L Sync</span>
+                <span class="m-pill"><strong>Zero-Trust</strong> VPN</span>
+              </div>
+              <div class="s-card-footer">
+                <a href="projects/triple-seven.html" class="btn btn-secondary w-100">
+                  View Case Study →
+                </a>
+              </div>
             </div>
+          </article>
 
-          </div>
+          <!-- Card 3: Customer Behavior -->
+          <article class="supporting-project-card">
+            <div class="s-card-media">
+              <img src="assets/customer_behavior_cover.jpg" alt="Customer Shopping Behavior" class="s-card-img" />
+              <div class="s-card-circle-tag">
+                <span>SQL Analysis</span>
+              </div>
+            </div>
+            <div class="s-card-body">
+              <div class="s-card-badge">Data Analytics & SQL Modeling</div>
+              <h4 class="s-card-title">Customer Shopping Behavior Analysis</h4>
+              <p class="s-card-desc">Audited 3,900+ retail consumer transactions with PostgreSQL and Python to evaluate demographic trends and formulate 5 growth strategies.</p>
+              <div class="s-card-metrics">
+                <span class="m-pill"><strong>3,900</strong> Transactions</span>
+                <span class="m-pill"><strong>5</strong> Strategies</span>
+              </div>
+              <div class="s-card-footer">
+                <a href="projects/customer-behavior.html" class="btn btn-secondary w-100">
+                  View Case Study →
+                </a>
+              </div>
+            </div>
+          </article>
+
         </div>
 
       </div>
@@ -607,7 +679,7 @@
       <div class="footer-links">
         <a href="#home" class="footer-link">Home</a>
         <a href="#about-me" class="footer-link">About Me</a>
-        <a href="#horizontal-projects" class="footer-link">Projects</a>
+        <a href="#featured-projects" class="footer-link">Projects</a>
         <a href="#history" class="footer-link">Journey</a>
         <a href="#contact" class="footer-link">Contact</a>
       </div>
