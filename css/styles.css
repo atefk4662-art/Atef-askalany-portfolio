@@ -1587,34 +1587,492 @@ body.dark-theme {
   font-weight: 600;
 }
 
+/* ==========================================================================
+   KHALED HABIB INSPIRED EDITORIAL DESIGN SYSTEM & TRANSITIONS
+   ========================================================================== */
+
+/* ----------------- Header Right Group & Social Pills ----------------- */
+.header-right-group {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+}
+
+.header-social-pills {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn-pill-outline {
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+  border: 1px solid var(--border-medium);
+  color: var(--text-secondary);
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+.btn-pill-outline:hover {
+  border-color: var(--accent-cyan);
+  color: var(--text-primary);
+  background: var(--bg-surface-elevated);
+}
+
+.btn-pill-primary {
+  padding: 0.38rem 1rem;
+  border-radius: 999px;
+  background: var(--accent-cyan);
+  color: #FFFFFF;
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  transition: all var(--transition-fast);
+}
+
+.btn-pill-primary:hover {
+  background: var(--accent-cyan-light);
+  transform: translateY(-1px);
+}
+
+/* ----------------- Editorial Highlight Scribble & Typography ----------------- */
+.heading-highlight-svg {
+  position: relative;
+  display: inline-block;
+  color: var(--accent-cyan-light);
+}
+
+.highlight-scribble {
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 100%;
+  height: 18px;
+  fill: none;
+  stroke: var(--accent-cyan);
+  stroke-width: 5;
+  stroke-linecap: round;
+  pointer-events: none;
+}
+
+.editorial-divider {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  margin-bottom: 1.25rem;
+}
+
+.editorial-divider .divider-line {
+  width: 36px;
+  height: 2px;
+  background: var(--accent-cyan);
+}
+
+.editorial-divider .divider-text {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--accent-cyan-light);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.editorial-divider.center {
+  justify-content: center;
+}
+
+/* ----------------- Editorial Action Buttons ----------------- */
+.btn-light-editorial {
+  background: #F8FAFC;
+  color: #080B11;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  padding: 0.85rem 1.6rem;
+  border-radius: var(--radius-md);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  text-decoration: none;
+  transition: all var(--transition-fast);
+  border: 1px solid transparent;
+}
+
+.btn-light-editorial:hover {
+  background: #FFFFFF;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.15);
+}
+
+.btn-light-editorial.hover-icon-down:hover svg {
+  transform: translateY(3px);
+}
+
+.btn-light-editorial svg {
+  transition: transform var(--transition-fast);
+}
+
+.btn-outline-editorial {
+  background: transparent;
+  color: var(--text-primary);
+  border: 1px solid var(--border-medium);
+  font-family: var(--font-heading);
+  font-weight: 600;
+  padding: 0.85rem 1.6rem;
+  border-radius: var(--radius-md);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+.btn-outline-editorial:hover {
+  border-color: var(--accent-cyan);
+  color: var(--accent-cyan-light);
+  background: var(--bg-surface-elevated);
+}
+
+/* ----------------- Hero Section (Khaled Habib Inspired) ----------------- */
+.kh-hero-section {
+  padding-top: var(--spacing-2xl);
+  padding-bottom: var(--spacing-2xl);
+}
+
+.kh-hero-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 4rem;
+  align-items: center;
+  min-height: calc(80vh - 70px);
+}
+
+.kh-hero-title {
+  font-family: var(--font-heading);
+  font-size: 3.2rem;
+  font-weight: 800;
+  line-height: 1.18;
+  letter-spacing: -0.03em;
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+}
+
+.kh-hero-subtitle {
+  font-size: 1.15rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  max-width: 600px;
+  margin-bottom: 2.25rem;
+}
+
+.kh-hero-actions {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.kh-visual-card {
+  position: relative;
+  border-radius: var(--radius-xl);
+}
+
+.kh-visual-media {
+  position: relative;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  aspect-ratio: 1/1;
+  border: 1px solid var(--border-medium);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+}
+
+.kh-cover-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform var(--transition-smooth);
+}
+
+.kh-visual-card:hover .kh-cover-img {
+  transform: scale(1.03);
+}
+
+.kh-visual-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 50%, rgba(8, 11, 17, 0.85) 100%);
+}
+
+/* ----------------- Rotating Circular SVG Badge ----------------- */
+.rotate-badge-wrap {
+  position: absolute;
+  bottom: -28px;
+  right: -28px;
+  width: 165px;
+  height: 165px;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.rotate-badge-wrap.sm {
+  bottom: -20px;
+  right: -20px;
+  width: 135px;
+  height: 135px;
+}
+
+.rotate-badge {
+  width: 100%;
+  height: 100%;
+  animation: spinBadge 20s linear infinite;
+}
+
+@keyframes spinBadge {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* ----------------- About Me Section (Khaled Habib Inspired) ----------------- */
+.kh-about-top-grid {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 3.5rem;
+  align-items: center;
+  margin-bottom: 3.5rem;
+}
+
+.kh-about-frame {
+  position: relative;
+  border-radius: var(--radius-xl);
+}
+
+.kh-about-img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--border-medium);
+  box-shadow: var(--shadow-subtle);
+  display: block;
+}
+
+.kh-lead-statement {
+  font-family: var(--font-heading);
+  font-size: 1.85rem;
+  font-weight: 600;
+  line-height: 1.5;
+  color: var(--text-primary);
+}
+
+.kh-about-bottom-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+  border-top: 1px solid var(--border-subtle);
+  padding-top: 3rem;
+}
+
+.kh-about-pillar.align-btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.kh-pillar-title {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  line-height: 1.65;
+}
+
+/* ----------------- Horizontal Projects Scroller ----------------- */
+.kh-horizontal-strip-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  padding: 1rem 0 2rem 0;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+}
+
+.kh-horizontal-strip {
+  display: flex;
+  gap: 2rem;
+  padding: 0 max(1.5rem, calc((100vw - 1160px)/2));
+  width: max-content;
+}
+
+.kh-strip-card {
+  width: 460px;
+  flex-shrink: 0;
+  scroll-snap-align: start;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-medium);
+  transition: all var(--transition-smooth);
+}
+
+.kh-strip-card:hover {
+  border-color: var(--accent-cyan);
+  transform: translateY(-4px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+}
+
+.kh-strip-link {
+  text-decoration: none;
+  display: block;
+}
+
+.kh-strip-media {
+  position: relative;
+  height: 320px;
+  overflow: hidden;
+}
+
+.kh-strip-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-smooth);
+}
+
+.kh-strip-card:hover .kh-strip-img {
+  transform: scale(1.05);
+}
+
+.kh-strip-gradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(8, 11, 17, 0.1) 0%, rgba(8, 11, 17, 0.95) 90%);
+}
+
+.kh-strip-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.kh-strip-tag {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--accent-cyan-light);
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.kh-strip-title {
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  line-height: 1.3;
+}
+
+.kh-strip-desc {
+  font-size: 0.86rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.kh-strip-cta {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--accent-cyan-light);
+  margin-top: 0.25rem;
+}
+
+/* ----------------- Mid-Page Manifesto Section ----------------- */
+.kh-manifesto-box {
+  background: radial-gradient(circle at 50% 50%, rgba(14, 165, 233, 0.08) 0%, transparent 70%), var(--bg-surface);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-xl);
+  padding: 4.5rem 3rem;
+  text-align: center;
+}
+
+.kh-manifesto-heading {
+  font-family: var(--font-heading);
+  font-size: 2.1rem;
+  font-weight: 700;
+  line-height: 1.45;
+  color: var(--text-primary);
+  max-width: 900px;
+  margin: 1.5rem auto;
+}
+
+/* ----------------- History / Experience Rows ----------------- */
+.kh-history-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.kh-history-row {
+  display: grid;
+  grid-template-columns: 180px 1fr 160px;
+  gap: 2rem;
+  align-items: center;
+  border-bottom: 1px solid var(--border-subtle);
+  padding-bottom: 2rem;
+  transition: all var(--transition-fast);
+}
+
+.kh-history-row:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.kh-history-row:hover {
+  transform: translateX(6px);
+}
+
+.kh-h-title {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.4rem;
+}
+
+.kh-h-sub {
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.kh-h-role {
+  text-align: right;
+}
+
 /* ----------------- Responsive Adjustments ----------------- */
 @media (max-width: 992px) {
-  .hp-hero-title { font-size: 2.6rem; }
-  .hero-trust-grid { grid-template-columns: 1fr; }
-  .differentiator-grid { grid-template-columns: 1fr; }
-  .project-card { grid-template-columns: 1fr; }
+  .kh-hero-grid { grid-template-columns: 1fr; gap: 3rem; }
+  .kh-hero-title { font-size: 2.6rem; }
+  .kh-about-top-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .kh-about-bottom-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .kh-history-row { grid-template-columns: 1fr; gap: 1rem; }
+  .kh-h-role { text-align: left; }
   .capabilities-grid { grid-template-columns: 1fr; }
-  .framework-steps { grid-template-columns: repeat(2, 1fr); }
-  .about-grid { grid-template-columns: 1fr; }
   .skills-grid { grid-template-columns: 1fr; }
-  .services-grid { grid-template-columns: 1fr; }
-  
-  .hero-summary-grid { grid-template-columns: 1fr; }
-  .grid-3-col { grid-template-columns: 1fr; }
-  .objectives-grid { grid-template-columns: 1fr; }
-  .kpi-banner { grid-template-columns: repeat(2, 1fr); }
-  .journey-flow { grid-template-columns: 1fr; }
-  .journey-arrow { transform: rotate(90deg); padding: 0.5rem 0; }
-  .eco-card-grid { grid-template-columns: 1fr; }
-  .insights-bento { grid-template-columns: repeat(2, 1fr); }
-  .insight-tile.full-width { grid-column: span 2; }
-  .rec-grid { grid-template-columns: repeat(2, 1fr); }
-  .value-matrix { grid-template-columns: 1fr; }
-  .gallery-grid { grid-template-columns: 1fr; }
-  .dashboard-tabs { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 768px) {
+  .header-social-pills { display: none; }
   .mobile-toggle { display: flex; }
   .nav-links {
     position: fixed;
@@ -1629,29 +2087,15 @@ body.dark-theme {
     display: none;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
   }
-  .nav-links.open {
-    display: flex;
-  }
-  .journey-timeline::before { left: 10px; }
-  .timeline-item { padding-left: 36px; }
-  .timeline-marker { left: 2px; }
+  .nav-links.open { display: flex; }
+  .kh-strip-card { width: 320px; }
+  .kh-strip-media { height: 260px; }
 }
 
 @media (max-width: 640px) {
-  .hp-hero-title { font-size: 2.1rem; }
-  .cs-title { font-size: 2.2rem; }
-  .cs-subtitle { font-size: 1.1rem; }
-  .hp-hero-actions { flex-direction: column; }
-  .framework-steps { grid-template-columns: 1fr; }
+  .kh-hero-title { font-size: 2.1rem; }
+  .kh-manifesto-heading { font-size: 1.5rem; }
+  .kh-lead-statement { font-size: 1.4rem; }
+  .kh-hero-actions { flex-direction: column; }
   .contact-channels { flex-direction: column; }
-  .bi-kpi-grid { grid-template-columns: repeat(2, 1fr); }
-  .bi-charts-grid { grid-template-columns: 1fr; }
-  .col-span-8, .col-span-4 { grid-column: span 1; }
-  .insights-bento { grid-template-columns: 1fr; }
-  .insight-tile.full-width { grid-column: span 1; }
-  .tile-split { flex-direction: column; align-items: flex-start; }
-  .rec-grid { grid-template-columns: 1fr; }
-  .takeaway-footer { flex-direction: column; gap: 1.5rem; align-items: flex-start; }
-  .footer-container { flex-direction: column; gap: 1.25rem; align-items: flex-start; }
-  .dashboard-tabs { grid-template-columns: 1fr; }
 }
