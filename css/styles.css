@@ -2449,6 +2449,31 @@ body.dark-theme {
   color: #FFFFFF;
 }
 
+/* ----------------- Scroll Reveal Animation Rules ----------------- */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-on-scroll.is-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-delay-1 { transition-delay: 0.12s; }
+.reveal-delay-2 { transition-delay: 0.24s; }
+.reveal-delay-3 { transition-delay: 0.36s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal-on-scroll {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
 /* ----------------- Responsive Adjustments ----------------- */
 @media (max-width: 992px) {
   .kh-hero-grid { grid-template-columns: 1fr; gap: 3rem; }
@@ -2459,6 +2484,8 @@ body.dark-theme {
   .capabilities-grid { grid-template-columns: 1fr; }
   .skills-grid { grid-template-columns: 1fr; }
   .journey-story-card { padding: 2rem 1.5rem; }
+  .supporting-projects-grid { grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+  .hero-project-spotlight { grid-template-columns: 1fr; gap: 2rem; }
 }
 
 @media (max-width: 768px) {
@@ -2488,4 +2515,6 @@ body.dark-theme {
   .kh-lead-statement { font-size: 1.4rem; }
   .kh-hero-actions { flex-direction: column; }
   .contact-channels { flex-direction: column; }
+  .supporting-projects-grid { grid-template-columns: 1fr; }
+  .hero-spotlight-content { padding: 1.75rem; }
 }
