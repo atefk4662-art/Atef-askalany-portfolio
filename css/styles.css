@@ -2048,6 +2048,64 @@ body.dark-theme {
   display: flex;
   align-items: center;
   justify-content: center;
+/* ----------------- Projects Gateway Banner (Homepage -> Catalog) ----------------- */
+.projects-gateway-banner {
+  margin-top: 3rem;
+  background: linear-gradient(135deg, rgba(14, 165, 233, 0.08) 0%, rgba(16, 185, 129, 0.05) 100%), var(--bg-surface);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-xl);
+  padding: 3rem 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-subtle);
+}
+
+.projects-gateway-banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(180deg, var(--accent-cyan-light), var(--accent-emerald-light));
+}
+
+.pgb-content {
+  max-width: 680px;
+}
+
+.pgb-tag {
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: var(--accent-cyan-light);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.pgb-title {
+  font-family: var(--font-heading);
+  font-size: 1.65rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  line-height: 1.3;
+  margin-bottom: 0.5rem;
+}
+
+.pgb-desc {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+}
+
+.pgb-action {
+  flex-shrink: 0;
 }
 
 /* ----------------- Supporting 3-Column Projects Grid ----------------- */
