@@ -2381,34 +2381,42 @@ body.dark-theme {
 }
 
 .journey-narrative {
-  font-size: 1rem;
+  font-size: 0.98rem;
   color: var(--text-secondary);
-  line-height: 1.75;
+  line-height: 1.7;
 }
 
-.journey-gained-box {
-  background: rgba(14, 165, 233, 0.05);
-  border: 1px solid rgba(14, 165, 233, 0.15);
-  border-radius: var(--radius-md);
-  padding: 1.25rem 1.5rem;
+.journey-tags-group {
   display: flex;
-  flex-direction: column;
-  gap: 0.4rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.25rem;
 }
 
-.journey-gained-label {
+.journey-tag {
   font-family: var(--font-mono);
-  font-size: 0.75rem;
-  font-weight: 700;
-  color: var(--accent-cyan-light);
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
+  font-size: 0.76rem;
+  padding: 0.25rem 0.65rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-subtle);
+  border-radius: 6px;
+  color: var(--text-secondary);
 }
 
-.journey-gained-text {
-  font-size: 0.92rem;
-  color: var(--text-primary);
-  line-height: 1.6;
+.journey-highlight-card {
+  border-color: rgba(14, 165, 233, 0.3);
+  background: linear-gradient(135deg, rgba(14, 165, 233, 0.06) 0%, rgba(14, 20, 32, 0.95) 100%);
+}
+
+.journey-highlight-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(180deg, var(--accent-cyan-light), var(--accent-emerald-light));
+  border-radius: var(--radius-xl) 0 0 var(--radius-xl);
 }
 
 .journey-card-actions {
