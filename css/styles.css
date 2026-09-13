@@ -2368,49 +2368,122 @@ body.dark-theme {
   line-height: 1.7;
 }
 
-/* ----------------- My Journey (Story-Driven Milestones) ----------------- */
-.journey-timeline-container {
+/* ----------------- My Journey (Process Timeline Architecture) ----------------- */
+.journey-process-timeline {
+  position: relative;
+  padding-left: 3.5rem;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
-  position: relative;
+  gap: 2.25rem;
 }
 
-.journey-story-card {
-  background: var(--bg-surface);
-  border: 1px solid var(--border-subtle);
-  border-radius: var(--radius-xl);
-  padding: 2.5rem;
+/* Vertical Connecting Line */
+.journey-process-timeline::before {
+  content: "";
+  position: absolute;
+  top: 1.5rem;
+  bottom: 1.5rem;
+  left: 1.25rem;
+  width: 2px;
+  background: linear-gradient(180deg, var(--accent-cyan) 0%, rgba(14, 165, 233, 0.5) 70%, var(--accent-emerald) 100%);
+  z-index: 1;
+}
+
+/* Timeline Item Container */
+.journey-process-item {
+  position: relative;
   display: flex;
   flex-direction: column;
-  gap: 1.35rem;
-  position: relative;
+}
+
+/* Timeline Node / Step Badge (01, 02, 03...) */
+.journey-step-node {
+  position: absolute;
+  left: -3.5rem;
+  top: 0.25rem;
+  width: 2.6rem;
+  height: 2.6rem;
+  border-radius: 50%;
+  background: #0E1420;
+  border: 2px solid var(--accent-cyan);
+  color: var(--accent-cyan-light);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  box-shadow: 0 0 15px rgba(14, 165, 233, 0.3);
   transition: all var(--transition-smooth);
 }
 
-.journey-story-card:hover {
-  border-color: var(--border-medium);
-  background: var(--bg-surface-elevated);
-  transform: translateY(-2px);
+.journey-process-item:hover .journey-step-node {
+  background: var(--accent-cyan);
+  color: #080B11;
+  box-shadow: 0 0 20px rgba(14, 165, 233, 0.6);
+  transform: scale(1.1);
 }
 
-.journey-header {
+/* Active Highlight Node for Latest Milestone (IT SYS) */
+.journey-process-item.latest-milestone .journey-step-node {
+  border-color: var(--accent-emerald-light);
+  color: var(--accent-emerald-light);
+  box-shadow: 0 0 18px rgba(16, 185, 129, 0.4);
+}
+
+.journey-process-item.latest-milestone:hover .journey-step-node {
+  background: var(--accent-emerald);
+  color: #080B11;
+  box-shadow: 0 0 25px rgba(16, 185, 129, 0.7);
+}
+
+/* Timeline Content Card */
+.journey-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-xl);
+  padding: 2.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.15rem;
+  box-shadow: var(--shadow-subtle);
+  transition: all var(--transition-smooth);
+  position: relative;
+}
+
+.journey-card:hover {
+  border-color: var(--accent-cyan);
+  background: var(--bg-surface-elevated);
+  transform: translateX(6px);
+}
+
+.journey-process-item.latest-milestone .journey-card {
+  border-color: rgba(16, 185, 129, 0.35);
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.05) 0%, rgba(14, 20, 32, 0.95) 100%);
+}
+
+.journey-process-item.latest-milestone .journey-card:hover {
+  border-color: var(--accent-emerald);
+}
+
+.journey-card-header {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   flex-wrap: wrap;
   gap: 1rem;
   border-bottom: 1px solid var(--border-subtle);
-  padding-bottom: 1.25rem;
+  padding-bottom: 1rem;
 }
 
-.journey-meta {
+.journey-card-meta {
   display: flex;
   flex-direction: column;
-  gap: 0.35rem;
+  gap: 0.25rem;
 }
 
-.journey-org-badge {
+.journey-card-org {
   font-family: var(--font-mono);
   font-size: 0.78rem;
   font-weight: 700;
@@ -2419,39 +2492,50 @@ body.dark-theme {
   text-transform: uppercase;
 }
 
-.journey-role-title {
+.journey-process-item.latest-milestone .journey-card-org {
+  color: var(--accent-emerald-light);
+}
+
+.journey-card-title {
   font-family: var(--font-heading);
-  font-size: 1.45rem;
+  font-size: 1.35rem;
   font-weight: 800;
   color: var(--text-primary);
   line-height: 1.3;
 }
 
-.journey-period-pill {
-  align-self: flex-start;
+.journey-date-pill {
   font-family: var(--font-mono);
   font-size: 0.78rem;
+  font-weight: 600;
   padding: 0.35rem 0.85rem;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid var(--border-subtle);
+  background: rgba(14, 165, 233, 0.08);
+  border: 1px solid rgba(14, 165, 233, 0.25);
   border-radius: 999px;
-  color: var(--text-secondary);
+  color: var(--accent-cyan-light);
+  white-space: nowrap;
 }
 
-.journey-narrative {
-  font-size: 0.98rem;
+.journey-process-item.latest-milestone .journey-date-pill {
+  background: rgba(16, 185, 129, 0.1);
+  border-color: rgba(16, 185, 129, 0.3);
+  color: var(--accent-emerald-light);
+}
+
+.journey-card-body {
+  font-size: 0.96rem;
   color: var(--text-secondary);
   line-height: 1.7;
 }
 
-.journey-tags-group {
+.journey-tags-list {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
   margin-top: 0.25rem;
 }
 
-.journey-tag {
+.j-tag {
   font-family: var(--font-mono);
   font-size: 0.76rem;
   padding: 0.25rem 0.65rem;
@@ -2459,52 +2543,6 @@ body.dark-theme {
   border: 1px solid var(--border-subtle);
   border-radius: 6px;
   color: var(--text-secondary);
-}
-
-.journey-highlight-card {
-  border-color: rgba(14, 165, 233, 0.3);
-  background: linear-gradient(135deg, rgba(14, 165, 233, 0.06) 0%, rgba(14, 20, 32, 0.95) 100%);
-}
-
-.journey-highlight-card::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 4px;
-  height: 100%;
-  background: linear-gradient(180deg, var(--accent-cyan-light), var(--accent-emerald-light));
-  border-radius: var(--radius-xl) 0 0 var(--radius-xl);
-}
-
-.journey-card-actions {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 1rem;
-  margin-top: 0.25rem;
-}
-
-.btn-cert-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-family: var(--font-mono);
-  font-size: 0.82rem;
-  font-weight: 600;
-  color: var(--accent-cyan-light);
-  text-decoration: none;
-  padding: 0.45rem 1rem;
-  border: 1px solid rgba(14, 165, 233, 0.35);
-  border-radius: 6px;
-  background: rgba(14, 165, 233, 0.08);
-  transition: all var(--transition-fast);
-}
-
-.btn-cert-link:hover {
-  background: rgba(14, 165, 233, 0.18);
-  border-color: var(--accent-cyan-light);
-  color: #FFFFFF;
 }
 
 /* ----------------- Scroll Reveal Animation Rules ----------------- */
