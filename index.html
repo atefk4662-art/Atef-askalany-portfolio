@@ -31,6 +31,7 @@
           <a href="#home" class="nav-link active">Home</a>
           <a href="#about-me" class="nav-link">About Me</a>
           <a href="#what-i-do" class="nav-link">What I Do</a>
+          <a href="#skills" class="nav-link">Skills</a>
           <a href="#journey" class="nav-link">My Journey</a>
           <a href="#selected-work" class="nav-link">Selected Work</a>
           <a href="#contact" class="nav-link">Contact</a>
@@ -93,22 +94,28 @@
             </div>
           </div>
 
-          <!-- Right Column: Circular Portrait with Floating Rotating Badge -->
+          <!-- Right Column: Modern Tech Portrait Frame with Floating Glass Badges -->
           <div class="kh-hero-visual-col reveal-on-scroll">
             <div class="kh-circular-frame-wrapper">
               <div class="kh-circular-frame">
                 <img src="assets/atef_portrait.jpg" alt="Atef Asklany" class="kh-circular-img" />
               </div>
 
-              <!-- Rotating Circular Badge overlapping top-left of circle -->
-              <div class="rotate-badge-badge-top-left">
-                <div class="rotate-badge">
-                  <svg viewBox="0 0 300 300">
-                    <path id="heroCurvedText" fill="none" stroke="none" d="M 32.55,148.48 A 108.15,108.15 0 0 1 140.70,40.32 A 108.15,108.15 0 0 1 248.85,148.48 A 108.15,108.15 0 0 1 140.70,256.63 A 108.15,108.15 0 0 1 32.55,148.48 Z"></path>
-                    <text font-size="24" fill="#FFFFFF" letter-spacing="2" font-weight="700">
-                      <textPath xlink:href="#heroCurvedText" side="left" startOffset="0">- MAKING A DIFFERENCE - هتعمل فرق - عاطف -</textPath>
-                    </text>
-                  </svg>
+              <!-- Floating Glass Badge 1: Role & Core Focus -->
+              <div class="hero-glass-pill top-left">
+                <span class="live-pulse-dot"></span>
+                <div class="h-pill-text">
+                  <span class="h-pill-role">Junior Business Analyst</span>
+                  <span class="h-pill-detail">Business Strategy • Process Design</span>
+                </div>
+              </div>
+
+              <!-- Floating Glass Badge 2: Analytical Focus -->
+              <div class="hero-glass-pill bottom-right">
+                <div class="h-pill-icon">📊</div>
+                <div class="h-pill-text">
+                  <span class="h-pill-role">Data & Insights</span>
+                  <span class="h-pill-detail">Smart Solutions</span>
                 </div>
               </div>
             </div>
@@ -246,7 +253,77 @@
       </div>
     </section>
 
-    <!-- ================= 04. MY JOURNEY ================= -->
+    <!-- ================= 04. TECHNICAL & ANALYTICAL CAPABILITIES ================= -->
+    <section class="section-spacing" id="skills">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="editorial-divider">
+            <span class="divider-line"></span>
+            <span class="divider-text">Toolkit & Capabilities</span>
+          </div>
+          <h2 class="section-heading">Technical & Analytical Stack</h2>
+          <p class="section-sub">Core analytical tools, business systems methodologies, and technical stack applied across projects.</p>
+        </div>
+
+        <div class="skills-categories-grid reveal-on-scroll">
+          
+          <!-- Category 1: Data Analytics & BI -->
+          <div class="skill-category-card">
+            <div class="skill-card-top">
+              <div class="skill-card-icon">📊</div>
+              <h3 class="skill-card-title">Data & Analytics</h3>
+            </div>
+            <div class="skill-pills-wrap">
+              <span class="skill-pill">SQL (PostgreSQL / MySQL)</span>
+              <span class="skill-pill">Power BI & DAX</span>
+              <span class="skill-pill">Python (Pandas, NumPy)</span>
+              <span class="skill-pill">Data Modeling & ETL</span>
+              <span class="skill-pill">Exploratory Data Analysis</span>
+              <span class="skill-pill">Sentiment Analysis</span>
+              <span class="skill-pill">Statistical Thinking</span>
+            </div>
+          </div>
+
+          <!-- Category 2: Business Analysis & ERP -->
+          <div class="skill-category-card">
+            <div class="skill-card-top">
+              <div class="skill-card-icon">💼</div>
+              <h3 class="skill-card-title">Business Analysis & ERP</h3>
+            </div>
+            <div class="skill-pills-wrap">
+              <span class="skill-pill">Odoo ERP Implementation</span>
+              <span class="skill-pill">Business Process Modeling</span>
+              <span class="skill-pill">Requirements Engineering</span>
+              <span class="skill-pill">Workflow Optimization</span>
+              <span class="skill-pill">Gap Analysis & Feasibility</span>
+              <span class="skill-pill">Systems Architecture</span>
+            </div>
+          </div>
+
+          <!-- Category 3: Engineering & Systems Stack -->
+          <div class="skill-category-card">
+            <div class="skill-card-top">
+              <div class="skill-card-icon">⚙️</div>
+              <h3 class="skill-card-title">Systems & Development</h3>
+            </div>
+            <div class="skill-pills-wrap">
+              <span class="skill-pill">JavaScript (ES6+)</span>
+              <span class="skill-pill">Node.js & Express</span>
+              <span class="skill-pill">PHP & REST APIs</span>
+              <span class="skill-pill">Firebase & Firestore</span>
+              <span class="skill-pill">WebSockets (Real-Time)</span>
+              <span class="skill-pill">ESC/POS Printing</span>
+              <span class="skill-pill">Git & GitHub</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= 05. MY JOURNEY ================= -->
     <section class="section-spacing" id="journey">
       <div class="container">
         
@@ -259,119 +336,119 @@
           <p class="section-sub">A story of professional progression — connecting academic foundation to freelancing, data science, and real-world business analysis.</p>
         </div>
 
-        <div class="journey-process-timeline reveal-on-scroll">
+        <div class="journey-timeline reveal-on-scroll">
           
-          <!-- Step 01: ERU -->
-          <div class="journey-process-item">
-            <div class="journey-step-node">01</div>
-            <article class="journey-card">
-              <div class="journey-card-header">
-                <div class="journey-card-meta">
-                  <span class="journey-card-org">Egyptian Russian University (ERU)</span>
-                  <h3 class="journey-card-title">Business Information Systems (BIS)</h3>
-                </div>
-                <span class="journey-date-pill">Academic Foundation</span>
+          <!-- Milestone 1: ERU -->
+          <div class="timeline-milestone">
+            <div class="timeline-node">
+              <span class="node-dot"></span>
+            </div>
+            <div class="timeline-content">
+              <div class="timeline-top-bar">
+                <span class="timeline-org">Egyptian Russian University (ERU)</span>
+                <span class="timeline-duration">2021 – 2026</span>
               </div>
-              <p class="journey-card-body">
+              <h3 class="timeline-title">Business Information Systems (BIS)</h3>
+              <p class="timeline-body">
                 The foundational starting point of my journey. The BIS program provided me with an integrated understanding of commercial business operations, information systems, database design, systems analysis, and technology — shaping how I connect business workflows with structured data and practical digital solutions.
               </p>
-              <div class="journey-tags-list">
-                <span class="j-tag">Business</span>
-                <span class="j-tag">Systems</span>
-                <span class="j-tag">Data</span>
-                <span class="j-tag">Technology</span>
+              <div class="timeline-tags">
+                <span class="t-tag">Business</span>
+                <span class="t-tag">Systems</span>
+                <span class="t-tag">Data</span>
+                <span class="t-tag">Technology</span>
               </div>
-            </article>
+            </div>
           </div>
 
-          <!-- Step 02: ITIDA Gigs -->
-          <div class="journey-process-item">
-            <div class="journey-step-node">02</div>
-            <article class="journey-card">
-              <div class="journey-card-header">
-                <div class="journey-card-meta">
-                  <span class="journey-card-org">ITIDA × eYouth</span>
-                  <h3 class="journey-card-title">ITIDA Gigs — Freelancing Program</h3>
-                </div>
-                <span class="journey-date-pill">Freelancing Launch</span>
+          <!-- Milestone 2: ITIDA Gigs -->
+          <div class="timeline-milestone">
+            <div class="timeline-node">
+              <span class="node-dot"></span>
+            </div>
+            <div class="timeline-content">
+              <div class="timeline-top-bar">
+                <span class="timeline-org">ITIDA × eYouth</span>
+                <span class="timeline-duration">3 Months</span>
               </div>
-              <p class="journey-card-body">
+              <h3 class="timeline-title">ITIDA Gigs — Freelancing Program</h3>
+              <p class="timeline-body">
                 After building my academic foundation, I took my first step into turning technical capabilities into real freelance work. Completed "Freelancing 102" training, weekly masterclasses with expert coaches, and focus sessions covering profile setup, proposal writing, portfolio creation, financial management, client negotiation, communication, and marketing strategies — culminating in securing my first freelance gig.
               </p>
-              <div class="journey-tags-list">
-                <span class="j-tag">First Freelance Gig</span>
-                <span class="j-tag">Client Communication</span>
-                <span class="j-tag">Proposal Writing</span>
-                <span class="j-tag">Freelancing</span>
+              <div class="timeline-tags">
+                <span class="t-tag">First Freelance Gig</span>
+                <span class="t-tag">Client Communication</span>
+                <span class="t-tag">Proposal Writing</span>
+                <span class="t-tag">Freelancing</span>
               </div>
-            </article>
+            </div>
           </div>
 
-          <!-- Step 03: Covida -->
-          <div class="journey-process-item">
-            <div class="journey-step-node">03</div>
-            <article class="journey-card">
-              <div class="journey-card-header">
-                <div class="journey-card-meta">
-                  <span class="journey-card-org">Covida</span>
-                  <h3 class="journey-card-title">Covida — Data Analysis Training</h3>
-                </div>
-                <span class="journey-date-pill">Online Training</span>
+          <!-- Milestone 3: Covida -->
+          <div class="timeline-milestone">
+            <div class="timeline-node">
+              <span class="node-dot"></span>
+            </div>
+            <div class="timeline-content">
+              <div class="timeline-top-bar">
+                <span class="timeline-org">Covida</span>
+                <span class="timeline-duration">Online Training</span>
               </div>
-              <p class="journey-card-body">
+              <h3 class="timeline-title">Covida — Data Analysis Training</h3>
+              <p class="timeline-body">
                 Completed online training in Data Analysis with Covida, marking a focused transition from general freelancing toward a dedicated analytical path.
               </p>
-              <div class="journey-tags-list">
-                <span class="j-tag">Data Analysis</span>
-                <span class="j-tag">Online Training</span>
+              <div class="timeline-tags">
+                <span class="t-tag">Data Analysis</span>
+                <span class="t-tag">Online Training</span>
               </div>
-            </article>
+            </div>
           </div>
 
-          <!-- Step 04: GCI World 2026 -->
-          <div class="journey-process-item">
-            <div class="journey-step-node">04</div>
-            <article class="journey-card">
-              <div class="journey-card-header">
-                <div class="journey-card-meta">
-                  <span class="journey-card-org">Matsuo-Iwasawa Lab U-Tokyo | The University of Tokyo</span>
-                  <h3 class="journey-card-title">GCI World 2026 — Data Science & Machine Learning</h3>
-                </div>
-                <span class="journey-date-pill">2026</span>
+          <!-- Milestone 4: GCI World 2026 -->
+          <div class="timeline-milestone">
+            <div class="timeline-node">
+              <span class="node-dot"></span>
+            </div>
+            <div class="timeline-content">
+              <div class="timeline-top-bar">
+                <span class="timeline-org">Matsuo-Iwasawa Lab U-Tokyo | The University of Tokyo</span>
+                <span class="timeline-duration">6 Months</span>
               </div>
-              <p class="journey-card-body">
+              <h3 class="timeline-title">GCI World 2026 — Data Science & Machine Learning</h3>
+              <p class="timeline-body">
                 As my interest in Data Analysis grew, I went deeper into Data Science and Machine Learning through GCI World 2026 organized by Matsuo-Iwasawa Lab at The University of Tokyo. Strengthened skills in Python, statistical thinking, data analysis, and machine learning, successfully passing the final assessment and completing a Final Project analyzing real datasets, building & comparing Machine Learning models, and developing a data-driven business proposal.
               </p>
-              <div class="journey-tags-list">
-                <span class="j-tag">Python</span>
-                <span class="j-tag">Machine Learning</span>
-                <span class="j-tag">Data Science</span>
-                <span class="j-tag">Statistical Thinking</span>
+              <div class="timeline-tags">
+                <span class="t-tag">Python</span>
+                <span class="t-tag">Machine Learning</span>
+                <span class="t-tag">Data Science</span>
+                <span class="t-tag">Statistical Thinking</span>
               </div>
-            </article>
+            </div>
           </div>
 
-          <!-- Step 05: IT SYS -->
-          <div class="journey-process-item latest-milestone">
-            <div class="journey-step-node">05</div>
-            <article class="journey-card">
-              <div class="journey-card-header">
-                <div class="journey-card-meta">
-                  <span class="journey-card-org">IT SYS | Business Analysis Department</span>
-                  <h3 class="journey-card-title">IT SYS — Business Analysis Training</h3>
-                </div>
-                <span class="journey-date-pill">Current Focus</span>
+          <!-- Milestone 5: IT SYS (Junior Business Analyst) -->
+          <div class="timeline-milestone highlight">
+            <div class="timeline-node">
+              <span class="node-dot"></span>
+            </div>
+            <div class="timeline-content">
+              <div class="timeline-top-bar">
+                <span class="timeline-org">IT SYS | Business Analysis Department</span>
+                <span class="timeline-duration">Present</span>
               </div>
-              <p class="journey-card-body">
-                Gaining practical exposure within the Business Analysis department at IT SYS, working with Odoo ERP. Learning how real companies manage operations, how business workflows are structured, how requirements are translated into system solutions, and how Business Analysts connect business needs with ERP implementations to support organizational goals.
+              <h3 class="timeline-title">Junior Business Analyst</h3>
+              <p class="timeline-body">
+                Working within the Business Analysis department at IT SYS, focusing on Odoo ERP. Analyzing company operations, structuring business workflows, translating operational requirements into functional system solutions, and connecting business needs with practical ERP implementations to support organizational goals.
               </p>
-              <div class="journey-tags-list">
-                <span class="j-tag">Business Analysis</span>
-                <span class="j-tag">Odoo ERP</span>
-                <span class="j-tag">Business Processes</span>
-                <span class="j-tag">ERP Implementation</span>
+              <div class="timeline-tags">
+                <span class="t-tag">Business Analysis</span>
+                <span class="t-tag">Odoo ERP</span>
+                <span class="t-tag">Business Processes</span>
+                <span class="t-tag">ERP Implementation</span>
               </div>
-            </article>
+            </div>
           </div>
 
         </div>
@@ -381,7 +458,8 @@
 
 
 
-    <!-- ================= 05. SELECTED WORK ================= -->
+
+    <!-- ================= 06. SELECTED WORK ================= -->
     <section class="kh-projects-showcase section-spacing" id="selected-work">
       <div class="container">
         
@@ -391,61 +469,65 @@
               <span class="divider-line"></span>
               <span class="divider-text">SELECTED WORK</span>
             </div>
-            <h2 class="section-heading">Selected Work</h2>
-            <p class="section-sub">A selection of data-driven projects and practical business systems I’ve built.</p>
+            <h2 class="section-heading">Featured Work & System Architecture</h2>
+            <p class="section-sub">A live showcase of engineered business systems and data analytics projects — from an actively updated portfolio.</p>
           </div>
           <a href="projects.html" class="btn btn-outline-editorial">
             <span>View All Projects →</span>
           </a>
         </div>
 
-        <!-- 1. FEATURED CASE STUDY PREVIEW: ShopEasy -->
+        <!-- UNIFIED FEATURED SHOWCASE: FOUSH Restaurant POS -->
         <div class="hero-project-spotlight reveal-on-scroll">
           <div class="hero-spotlight-content">
             <div class="spotlight-badge-row">
-              <span class="badge badge-primary">E-Commerce & Marketing Analytics</span>
-              <span class="badge badge-subtle">Featured Case Study</span>
+              <span class="badge badge-primary">Systems & Software Architecture</span>
+              <span class="badge badge-subtle">Featured Showcase</span>
             </div>
             
-            <h3 class="spotlight-title">ShopEasy Marketing Analytics & Customer Retention Audit</h3>
+            <h3 class="spotlight-title">FOUSH High-Availability Restaurant POS Ecosystem</h3>
             
             <p class="spotlight-desc">
-              Audited transaction logs and customer touchpoints to diagnose conversion drop-offs. Built an interactive Power BI dashboard suite and sentiment pipeline that identified core drop-off points and improved retention strategies.
+              Engineered an offline-first Point of Sale ecosystem with zero-downtime dual-engine architecture, real-time kitchen display synchronization, raw thermal printing, and cloud management for multi-station restaurant operations.
             </p>
 
             <div class="spotlight-metrics-grid">
               <div class="spotlight-metric">
-                <span class="s-val">8.5%</span>
-                <span class="s-lbl">Avg Conversion</span>
+                <span class="s-val">100%</span>
+                <span class="s-lbl">Offline-First</span>
               </div>
               <div class="spotlight-metric">
-                <span class="s-val">2.98M</span>
-                <span class="s-lbl">Impressions</span>
+                <span class="s-val">5</span>
+                <span class="s-lbl">Role Portals</span>
               </div>
               <div class="spotlight-metric">
-                <span class="s-val">357</span>
-                <span class="s-lbl">Reviews Modeled</span>
+                <span class="s-val">Live</span>
+                <span class="s-lbl">Cloud Sync</span>
               </div>
             </div>
 
             <div class="spotlight-tools">
-              <span class="tool-tag">SQL</span>
-              <span class="tool-tag">Power BI</span>
-              <span class="tool-tag">Python</span>
-              <span class="tool-tag">DAX</span>
-              <span class="tool-tag">Sentiment Analysis</span>
+              <span class="tool-tag">JavaScript</span>
+              <span class="tool-tag">Node.js</span>
+              <span class="tool-tag">Firebase</span>
+              <span class="tool-tag">PWA</span>
+              <span class="tool-tag">ESC/POS</span>
+              <span class="tool-tag">WebSockets</span>
             </div>
 
-            <div class="spotlight-action">
-              <a href="projects/shopeasy.html" class="btn btn-primary btn-lg">
-                <span>Explore Full Case Study →</span>
+            <div class="spotlight-actions-group">
+              <a href="projects.html" class="btn btn-primary btn-lg">
+                <span>Explore Complete Projects Archive →</span>
+              </a>
+              <a href="projects/foush.html" class="btn btn-outline-editorial">
+                <span>View FOUSH Case Study</span>
               </a>
             </div>
           </div>
 
           <div class="hero-spotlight-media">
             <div class="spotlight-image-frame">
-              <img src="assets/shopeasy_cover.jpg" alt="ShopEasy Marketing Analytics Dashboard" class="spotlight-img" loading="lazy" />
+              <img src="assets/foush_real_cover.png" alt="FOUSH Restaurant POS System Interface" class="spotlight-img" loading="lazy" />
               <div class="spotlight-img-overlay"></div>
             </div>
 
@@ -454,27 +536,11 @@
                 <svg viewBox="0 0 300 300">
                   <path id="spotlightCurvedText" fill="none" stroke="none" d="M 32.55,148.48 A 108.15,108.15 0 0 1 140.70,40.32 A 108.15,108.15 0 0 1 248.85,148.48 A 108.15,108.15 0 0 1 140.70,256.63 A 108.15,108.15 0 0 1 32.55,148.48 Z"></path>
                   <text font-size="24" fill="#38BDF8" letter-spacing="2" font-weight="700">
-                    <textPath xlink:href="#spotlightCurvedText" side="left" startOffset="0">• POWER BI • SQL • ANALYTICS •</textPath>
+                    <textPath xlink:href="#spotlightCurvedText" side="left" startOffset="0">• NODE.JS • POS • FIREBASE • ARCHITECTURE •</textPath>
                   </text>
                 </svg>
               </div>
             </div>
-          </div>
-        </div>
-
-        <!-- 2. GATEWAY BANNER TO FULL CATALOG PAGE -->
-        <div class="projects-gateway-banner reveal-on-scroll">
-          <div class="pgb-content">
-            <span class="pgb-tag">Full Portfolio Catalog</span>
-            <h3 class="pgb-title">Explore Complete Work & Case Studies</h3>
-            <p class="pgb-desc">
-              Browse all 4 deployed systems and data analytics case studies — including FOUSH Restaurant POS, Triple Seven Enterprise System, and Customer Shopping Behavior.
-            </p>
-          </div>
-          <div class="pgb-action">
-            <a href="projects.html" class="btn btn-primary btn-lg">
-              <span>View All Projects (4 Deployed) →</span>
-            </a>
           </div>
         </div>
 
@@ -533,6 +599,7 @@
         <a href="#home" class="footer-link">Home</a>
         <a href="#about-me" class="footer-link">About Me</a>
         <a href="#what-i-do" class="footer-link">What I Do</a>
+        <a href="#skills" class="footer-link">Skills</a>
         <a href="#journey" class="footer-link">My Journey</a>
         <a href="#selected-work" class="footer-link">Selected Work</a>
         <a href="#contact" class="footer-link">Contact</a>
